@@ -1,0 +1,41 @@
+<measure>
+  <name>QAQC Check</name>
+  <uid>b9855d05-bf99-4442-857f-a32d852aff75</uid>
+  <version_id>41b23a4c-366a-4c38-8e52-d6b02c3be14c</version_id>
+  <description>Checks for modeling errors</description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Whole System</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>QAQCCheck_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>CB937A03</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.3</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>4DE1BB4E</checksum>
+    </file>
+  </files>
+</measure>

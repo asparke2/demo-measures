@@ -1,0 +1,47 @@
+<measure>
+  <name>Export XML Measure</name>
+  <uid>55b3f29f-5312-4c9d-8ea3-11a40b36a6f9</uid>
+  <version_id>d6841503-b4ed-4fc9-b74b-65c76dd667d8</version_id>
+  <description>This measure reads an xml file called resource.xml to pull lookup data from, and also appends output information to a file called results.xml stored directly on the C: drive (as an example).</description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Envelope.Fenestration</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>ExportXMLMeasure_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>99175245</checksum>
+    </file>
+    <file>
+      <filename>resource.xml</filename>
+      <filetype>xml</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>749CB8CA</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.1.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>10066F94</checksum>
+    </file>
+  </files>
+</measure>

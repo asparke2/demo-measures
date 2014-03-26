@@ -1,0 +1,51 @@
+<measure>
+  <name>Add Multiple Output Variables</name>
+  <uid>7257851c-4dbe-4c5d-a5c8-c51d73c1b239</uid>
+  <version_id>e9985774-2c2d-4c20-b496-337d3718997b</version_id>
+  <description>This measure adds output variable at the requested reporting frequency.</description>
+  <modeler_description>The measure just passes in the string and does not validate that it is a proper variable name.  Variable names should be comma separated.  It is up to the user to know this or to look at the .rdd file from a previous simulation run.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Reporting.QAQC</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>AddOutputVariable_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>D555F70A</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.0.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>2483699B</checksum>
+    </file>
+  </files>
+</measure>

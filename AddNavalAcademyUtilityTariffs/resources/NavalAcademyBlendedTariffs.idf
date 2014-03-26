@@ -1,0 +1,71 @@
+
+Version,
+  7.2.0.006;                              ! Version Identifier
+
+UtilityCost:Tariff,
+  NavalAcademyBlendedElec,                    !- Name
+  Electricity:Facility,                           !- Output Meter Name
+  kWh,                                    !- Conversion Factor Choice
+  ,                                       !- Energy Conversion Factor
+  ,                                       !- Demand Conversion Factor
+  ,                                       !- Time of Use Period Schedule Name
+  ,                                       !- Season Schedule Name
+  ,                                       !- Month Schedule Name
+  Day,                                    !- Demand Window Length
+  0.0;                                    !- Monthly Charge or Variable Name
+
+UtilityCost:Charge:Simple,
+  NavalAcademyBlendedElecEnergyCharge,                   !- Name
+  NavalAcademyBlendedElec,                    !- Tariff Name
+  totalEnergy,                            !- Source Variable
+  Annual,                                 !- Season
+  EnergyCharges,                          !- Category Variable Name
+  0.15;                                !- Cost per Unit Value or Variable Name
+
+  
+  
+  
+  
+UtilityCost:Tariff,
+  NavalAcademyBlendedDistHeat,                    !- Name
+  DistrictHeating:Facility,                           !- Output Meter Name
+  MMBtu,                                    !- Conversion Factor Choice
+  ,                                       !- Energy Conversion Factor
+  ,                                       !- Demand Conversion Factor
+  ,                                       !- Time of Use Period Schedule Name
+  ,                                       !- Season Schedule Name
+  ,                                       !- Month Schedule Name
+  Day,                                    !- Demand Window Length
+  0.0;                                    !- Monthly Charge or Variable Name
+
+UtilityCost:Charge:Simple,
+  NavalAcademyBlendedDistHeatEnergyCharge,                   !- Name
+  NavalAcademyBlendedDistHeat,                    !- Tariff Name
+  totalEnergy,                            !- Source Variable
+  Annual,                                 !- Season
+  EnergyCharges,                          !- Category Variable Name
+  44.17;                                !- Cost per Unit Value or Variable Name
+
+  
+  
+
+UtilityCost:Tariff,
+  NavalAcademyBlendedDistClg,                    !- Name
+  DistrictHeating:Facility,                           !- Output Meter Name
+  MMBtu,                                    !- Conversion Factor Choice
+  ,                                       !- Energy Conversion Factor
+  ,                                       !- Demand Conversion Factor
+  ,                                       !- Time of Use Period Schedule Name
+  ,                                       !- Season Schedule Name
+  ,                                       !- Month Schedule Name
+  Day,                                    !- Demand Window Length
+  0.0;                                    !- Monthly Charge or Variable Name
+
+UtilityCost:Charge:Simple,
+  NavalAcademyBlendedDistClgEnergyCharge,                   !- Name
+  NavalAcademyBlendedDistClg,                    !- Tariff Name
+  totalEnergy,                            !- Source Variable
+  Annual,                                 !- Season
+  EnergyCharges,                          !- Category Variable Name
+  15.04;                                !- Cost per Unit Value or Variable Name
+  

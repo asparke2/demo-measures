@@ -1,0 +1,41 @@
+<measure>
+  <name>Decrease Rated Pump Head by Percentage</name>
+  <uid>5688fa80-6a69-4609-8e07-da54801e79df</uid>
+  <version_id>3df39071-d849-49e5-878b-02924d1c3fdb</version_id>
+  <description>This measure reduces the amount of pressure that a pump must overcome to move water around the building.  This may be used as a calibration parameter when the design pump head is not known.  This would not commonly be used as an energy conservation measure except in the case that it is used to represent the cleaning of hot or chilled water coils.</description>
+  <modeler_description>Loops through all pumps in the model, lowering rated pump head by the user-specified percentage.  Negative % reduction numbers will increase pump head by that percentage.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Distribution</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>DecreaseRatedPumpHeadbyPercentage_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>F90DD79C</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.1</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>39F6B17A</checksum>
+    </file>
+  </files>
+</measure>

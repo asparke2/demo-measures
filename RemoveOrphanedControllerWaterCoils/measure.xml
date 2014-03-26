@@ -1,0 +1,41 @@
+<measure>
+  <name>Remove Orphaned Controller Water Coils</name>
+  <uid>502df3fa-faf7-4d8b-b352-60e1a2ceb410</uid>
+  <version_id>77c4bf95-c79b-425f-a013-24f9eb81067c</version_id>
+  <description></description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Reporting.Troubleshooting</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>RemoveOrphanedControllerWaterCoils_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>7A3015B1</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>C1F2F38F</checksum>
+    </file>
+  </files>
+</measure>

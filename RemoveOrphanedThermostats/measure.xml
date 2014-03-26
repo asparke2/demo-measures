@@ -1,0 +1,41 @@
+<measure>
+  <name>Remove Orphaned Thermostats</name>
+  <uid>5accb424-f18a-479c-9fd7-90eebbf3d73c</uid>
+  <version_id>a2889efd-d670-465c-8ed4-0c2475bedb17</version_id>
+  <description></description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Reporting.Troubleshooting</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>RemoveOrphanedThermostats_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>1E3FC194</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>FFAF9F7F</checksum>
+    </file>
+  </files>
+</measure>

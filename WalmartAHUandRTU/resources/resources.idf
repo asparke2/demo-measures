@@ -1,0 +1,409 @@
+ZoneHVAC:PackagedTerminalAirConditioner,
+    Sales RTU, !- Name
+    Always On, !- Availability Schedule Name
+    Sales RTU Air Loop Inlet, !- Air Inlet Node Name
+    Sales RTU Air Outlet, !- Air Outlet Node Name
+    OutdoorAir:Mixer, !- Outdoor Air Mixer Object Type
+    Sales RTU OA Mixer, !- Outdoor Air Mixer Name
+    23.3613963, !- Supply Air Flow Rate During Cooling Operation {m3/s}
+    23.3613963, !- Supply Air Flow Rate During Heating Operation operation {m3/s}
+    23.3613963, !- Supply Air Flow Rate When No Cooling or Heating is Needed {m3/s}
+    0, !- Outdoor Air Flow Rate During Cooling Operation {m3/s}
+    0, !- Outdoor Air Flow Rate During Heating Operation {m3/s}
+    0, !- Outdoor Air Flow Rate When No Cooling or Heating is Needed {m3/s}
+    Fan:OnOff, !- Supply Air Fan Object Type
+    Sales RTU Fan, !- Supply Air Fan Name
+    Coil:Heating:Gas,         ! Component Object Type 3
+    Sales RTU Heating Coil, !- Heating Coil Name
+    Coil:Cooling:DX:SingleSpeed, !- Cooling Coil Object Type
+    Sales RTU Cooling Coil, !- Cooling Coil Name
+    DrawThrough, !- Fan Placement
+    RTUCycleSchedule; !- Supply Air Fan Operating Mode Schedule Name
+    !- Sales RTU Availability Managers;
+AvailabilityManagerAssignmentList,
+    Sales RTU Availability Managers,  !- Name
+    AvailabilityManager:NightCycle,  !- Availability Manager 1 Object Type
+    Sales RTU Availability;  !- Availability Manager 1 Name
+AvailabilityManager:NightCycle,
+    Sales RTU Availability,  !- Name
+    Always On,               !- Applicability Schedule Name
+    RTUCycleSchedule,             !- Fan Schedule Name
+    CycleOnControlZone,                 !- Control Type
+    1,                       !- Thermostat Tolerance {deltaC}
+    3600,                    !- Cycling Run Time {s}
+    Sales Zone;
+OutdoorAir:Mixer,
+    Sales RTU OA Mixer, !- Name
+    Sales RTU Mixed Air Outlet,  !- Mixed Air Node Name
+    Sales RTU Outside Air Inlet,  !- Outdoor Air Stream Node Name
+    Sales RTU Relief Air Outlet,  !- Relief Air Stream Node Name
+    Sales RTU Air Loop Inlet;!- Return Air Stream Node Name
+Coil:Cooling:DX:SingleSpeed,
+    Sales RTU Cooling Coil,  ! Name
+    Always On,    ! Availability Schedule Name
+    386854,                 ! Rated Total Cooling Capacity {W}
+    Autosize,                 ! Rated Sensible Heat Ratio
+    3.7,                        ! Rated COP {W/W}
+    23.3613963,                 ! Rated Air Flow Rate {m3/s}
+    ,                        !- Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
+    Sales RTU Mixed Air Outlet,               ! Air Inlet Node Name
+    Sales RTU Cooling Coil Outlet,               ! Air Outlet Node Name
+    Curve Biquadratic 37,           !- Total Cooling Capacity Function of Temperature Curve Name
+    Curve Quadratic 55,          !- Total Cooling Capacity Function of Flow Fraction Curve Name
+    Curve Biquadratic 38,               !- Energy Input Ratio Function of Temperature Curve Name
+    Curve Quadratic 56,              !- Energy Input Ratio Function of Flow Fraction Curve Name
+    Curve Quadratic 57;             !- Part Load Fraction Correlation Curve Name
+Coil:Heating:Gas,
+    Sales RTU Heating Coil,    ! Name
+    Always On,    ! Availability Schedule Name
+    0.8,                     ! Gas Burner Efficiency
+    541595,                 ! Nominal Capacity {W}
+    Sales RTU Cooling Coil Outlet,               ! Air Inlet Node Name
+    Sales RTU Heating Coil Outlet,               ! Air Outlet Node Name
+    Sales RTU Heating Coil Outlet;               ! Temperature Setpoint Node Name
+Fan:OnOff,
+    Sales RTU Fan,  ! Name
+    Always On,    ! Availability Schedule Name
+    0.875,      ! Fan Efficiency
+    1002,                      ! Pressure Rise {Pa}
+    23.3613963,                 ! Maximum Flow Rate {m3/s}
+    0.9,      ! Motor Efficiency
+    1,                        ! Motor In Airstream Fraction
+    Sales RTU Heating Coil Outlet,               ! Air Inlet Node Name
+    Sales RTU Air Outlet;               ! Air Outlet Node Name
+SetpointManager:MixedAir,
+    Sales RTU Cooling Supply Air Temp Manager,  ! Name
+    Temperature,              ! Control Variable
+    Sales RTU Heating Coil Outlet,               ! Reference Setpoint Node Name
+    Sales RTU Cooling Coil Outlet,               ! Fan Inlet Node Name
+    Sales RTU Air Outlet,               ! Fan Outlet Node Name
+    Sales RTU Mixed Air Nodes;               ! Setpoint Node or NodeList Name
+NodeList,
+    Sales RTU Mixed Air Nodes,  !- Name
+    Sales RTU Cooling Coil Outlet,  !- Node 1 Name
+    Sales RTU Mixed Air Outlet;  !- Node 2 Name
+SetpointManager:SingleZone:Reheat,
+    Sales RTU Heating Supply Air Temp Manager,  ! Name
+    Temperature,              ! Control Variable
+    -99,                      ! Minimum Supply Air Temperature {C}
+    99,                       ! Maximum Supply Air Temperature {C}
+    Sales Zone,                         ! Control Zone Name
+    Sales Air Node,                         ! Zone Node Name
+    Sales RTU Air Outlet,                         ! Zone Inlet Node Name
+    Sales RTU Heating Coil Outlet;               ! Setpoint Node or NodeList Name
+
+Sizing:System,
+    AHU_1_2_3,         ! AirLoop Name
+    Sensible,                 ! Type of Load to Size On
+    7.0729211,                 ! Design Outdoor Air Flow Rate {m3/s}
+    1,                        ! Minimum System Air Flow Ratio
+    7.0,                      ! Preheat Design Temperature {C}
+    0.008,                    ! Preheat Design Humidity Ratio {kg-H2O/kg-Air}
+    12.8,                     ! Precool Design Temperature {C}
+    0.008,                    ! Precool Design Humidity Ratio {kg-H2O/kg-Air}
+    12.8,                     ! Central Cooling Design Supply Air Temperature {C}
+    50.0,                     ! Central Heating Design Supply Air Temperature {C}
+    NonCoincident,            ! Sizing Option
+    No,                      ! 100% Outdoor Air in Cooling
+    No,                      ! 100% Outdoor Air in Heating
+    0.008,                    ! Central Cooling Design Supply Air Humidity Ratio {kg-H2O/kg-Air}
+    0.008,                    ! Central Heating Design Supply Air Humidity Ratio {kg-H2O/kg-Air}
+    Flow/System,                ! Cooling Design Air Flow Method
+    7.0729211,                      ! Cooling Design Air Flow Rate {m3/s}
+    Flow/System,                ! Heating Design Air Flow Method
+    7.0729211,                      ! Heating Design Air Flow Rate {m3/s}
+    ZoneSum,                    !- System Outdoor Air Method
+    1.0;                    !- Zone Maximum Outdoor Air Fraction
+AirLoopHVAC,
+    AHU_1_2_3,         ! Name
+    ,                         ! Controller List Name
+    AHU_1_2_3 Availability Managers,  ! Availability Manager List Name
+    7.0729211,                 ! Design Supply Air Flow Rate {m3/s}
+    AHU_1_2_3 Branches,  ! Branch List Name
+    ,                         ! Connector List Name
+    AHU_1_2_3 Air Loop Inlet,!- Supply Side Inlet Node Name
+    AHU_1_2_3 Return Air Outlet,  !- Demand Side Outlet Node Name
+    AHU_1_2_3 Supply Path Inlet,  !- Demand Side Inlet Node Names
+    AHU_1_2_3 Heating Coil Outlet;  !- Supply Side Outlet Node Names
+AvailabilityManagerAssignmentList,
+    AHU_1_2_3 Availability Managers,  !- Name
+    AvailabilityManager:NightCycle,  !- Availability Manager 1 Object Type
+    AHU_1_2_3 Availability;  !- Availability Manager 1 Name
+AvailabilityManager:NightCycle,
+    AHU_1_2_3 Availability,  !- Name
+    Always On,               !- Applicability Schedule Name
+    Always On,             !- Fan Schedule Name
+    CycleOnAny,                 !- Control Type
+    1,                       !- Thermostat Tolerance {deltaC}
+    3600;                    !- Cycling Run Time {s}
+BranchList,
+    AHU_1_2_3 Branches,  ! Name
+    AHU_1_2_3 Main Branch;  ! Branch Name 1
+Branch,
+    AHU_1_2_3 Main Branch,  ! Name
+    7.0729211,                 ! Maximum Flow Rate {m3/s}
+    ,                         ! Pressure Drop Curve Name
+    AirLoopHVAC:OutdoorAirSystem,  ! Component Object Type 1
+    AHU_1_2_3 OA System,     !- Component 1 Name
+    AHU_1_2_3 Air Loop Inlet,!- Component 1 Inlet Node Name
+    AHU_1_2_3 Mixed Air Outlet,  !- Component 1 Outlet Node Name
+    Passive,                 !- Component 1 Branch Control Type
+    CoilSystem:Cooling:DX,  ! Component Object Type 2
+    AHU_1_2_3 DX Cooling,  ! Component Name 2
+    AHU_1_2_3 Mixed Air Outlet, !- Component 3 Inlet Node Name
+    AHU_1_2_3 Cooling Coil Outlet,  !- Component 3 Outlet Node Name
+    Passive,                  ! Component Branch Control Type 2
+    Dehumidifier:Desiccant:System,       ! Component Object Type 4
+    AHU_1_2_3 Desiccant System,  ! Component Name 4
+    AHU_1_2_3 Cooling Coil Outlet,               ! Component Inlet Node Name 4
+    AHU_1_2_3 Desiccant Outlet,               ! Component Outlet Node Name 4
+    Passive,                  ! Component Branch Control Type 4
+    Fan:ConstantVolume,       ! Component Object Type 4
+    AHU_1_2_3 Supply Fan,  ! Component Name 4
+    AHU_1_2_3 Desiccant Outlet,               ! Component Inlet Node Name 4
+    AHU_1_2_3 Supply Fan Outlet,               ! Component Outlet Node Name 4
+    Passive,                  ! Component Branch Control Type 4
+    Coil:Heating:Gas,         ! Component Object Type 3
+    AHU_1_2_3 Heating Coil,    ! Component Name 3
+    AHU_1_2_3 Supply Fan Outlet,               ! Component Inlet Node Name 3
+    AHU_1_2_3 Heating Coil Outlet,               ! Component Outlet Node Name 3
+    Passive;                  ! Component Branch Control Type 3
+AirLoopHVAC:OutdoorAirSystem,
+    AHU_1_2_3 OA System,     !- Name
+    AHU_1_2_3 OA System Controllers,  !- Controller List Name
+    AHU_1_2_3 OA System Equipment,  !- Outdoor Air Equipment List Name
+    AHU_1_2_3 Availability Managers;  !- Availability Manager List Name
+AirLoopHVAC:ControllerList,
+    AHU_1_2_3 OA System Controllers,  !- Name
+    Controller:OutdoorAir,   !- Controller 1 Object Type
+    AHU_1_2_3 OA Controller; !- Controller 1 Name
+Controller:OutdoorAir,
+    AHU_1_2_3 OA Controller, !- Name
+    AHU_1_2_3 Relief Air Outlet,  !- Relief Air Outlet Node Name
+    AHU_1_2_3 Air Loop Inlet,!- Return Air Node Name
+    AHU_1_2_3 Mixed Air Outlet,  !- Mixed Air Node Name
+    AHU_1_2_3 Outside Air Inlet,  !- Actuator Node Name
+    7.0729211,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    7.0729211,                !- Maximum Outdoor Air Flow Rate {m3/s}
+    FixedDryBulb,                   !- Economizer Control Type
+    ModulateFlow,            !- Economizer Control Action Type
+    23.888889313,                        !- Economizer Maximum Limit Dry-Bulb Temperature {C}
+    ,                        !- Economizer Maximum Limit Enthalpy {J/kg}
+    8.89,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    -17.78,                        !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    ,               !- Lockout Type
+    ;     !- Minimum Limit Type
+AirLoopHVAC:OutdoorAirSystem:EquipmentList,
+    AHU_1_2_3 OA System Equipment,  !- Name
+    OutdoorAir:Mixer,        !- Component 1 Object Type
+    AHU_1_2_3 OA Mixing Box; !- Component 1 Name
+OutdoorAir:Mixer,
+    AHU_1_2_3 OA Mixing Box, !- Name
+    AHU_1_2_3 Mixed Air Outlet,  !- Mixed Air Node Name
+    AHU_1_2_3 Outside Air Inlet,  !- Outdoor Air Stream Node Name
+    AHU_1_2_3 Relief Air Outlet,  !- Relief Air Stream Node Name
+    AHU_1_2_3 Air Loop Inlet;!- Return Air Stream Node Name
+OutdoorAir:NodeList,
+    AHU_1_2_3 Outside Air Inlet,
+    AHU_1_2_3 Condenser Inlet Node,
+    Sales RTU Outside Air Inlet,
+    Sales RTU Condenser Inlet Node,
+    AHU_1_2_3 Regen Coil Inlet;  !- Node or NodeList Name 1
+CoilSystem:Cooling:DX,
+    AHU_1_2_3 DX Cooling,  ! Name
+    Always On,    ! Availability Schedule Name
+    AHU_1_2_3 Mixed Air Outlet,               ! DX Cooling Coil System Inlet Node Name
+    AHU_1_2_3 Cooling Coil Outlet,               ! DX Cooling Coil System Outlet Node Name
+    AHU_1_2_3 Desiccant Outlet,               ! DX Cooling Coil System Sensor Node Name
+    Coil:Cooling:DX:SingleSpeed,  				! Cooling Coil Object Type
+    AHU_1_2_3 Cooling Coil,  					! Cooling Coil Name
+    None, 									!- Dehumidification Control Type
+    Yes, 										!- Run on Sensible Load
+    No, 										!- Run on Latent Load
+    Yes, 										!- Use DOAS DX Cooling Coil
+    2.0; 										!- DOAS DX Cooling Coil Leaving Minimum Air Temperature
+Coil:Cooling:DX:SingleSpeed,
+    AHU_1_2_3 Cooling Coil,  ! Name
+    Always On,    ! Availability Schedule Name
+    316517,                 ! Rated Total Cooling Capacity {W}
+    0.60,                 ! Rated Sensible Heat Ratio
+    3.253223896,                        ! Rated COP {W/W}
+    7.0729211,                 ! Rated Air Flow Rate {m3/s}
+    ,                        !- Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
+    AHU_1_2_3 Mixed Air Outlet,               ! Air Inlet Node Name
+    AHU_1_2_3 Cooling Coil Outlet,               ! Air Outlet Node Name
+    Curve Biquadratic 37,           !- Total Cooling Capacity Function of Temperature Curve Name
+    Curve Quadratic 55,          !- Total Cooling Capacity Function of Flow Fraction Curve Name
+    Curve Biquadratic 38,               !- Energy Input Ratio Function of Temperature Curve Name
+    Curve Quadratic 56,              !- Energy Input Ratio Function of Flow Fraction Curve Name
+    Curve Quadratic 57;             !- Part Load Fraction Correlation Curve Name
+Dehumidifier:Desiccant:System,
+    AHU_1_2_3 Desiccant System,             !- Name
+    Always On,           !- Availability Schedule Name
+    HeatExchanger:Desiccant:BalancedFlow,  !- Desiccant Heat Exchanger Object Type
+    AHU_1_2_3 Desiccant Wheel,  !- Desiccant Heat Exchanger Name
+    AHU_1_2_3 Desiccant Outlet,  !- Sensor Node Name
+    Fan:OnOff,      !- Regeneration Air Fan Object Type
+    AHU_1_2_3 Desiccant Regen Fan,     !- Regeneration Air Fan Name
+    DrawThrough,             !- Regeneration Air Fan Placement
+    ,        !- Regeneration Air Heater Object Type
+    ,    !- Regeneration Air Heater Name
+    ,               !- Regeneration Inlet Air Setpoint Temperature {C}
+    ,                           !- Companion Cooling Coil Object Type
+    ,                           !- Companion Cooling Coil Name
+    ,                     !- Companion Cooling Coil Upstream of Dehumidifier Process Inlet
+    ,                     !- Companion Coil Regeneration Air Heating
+    ,                    !- Exhaust Fan Maximum Flow Rate {m3/s}
+    ,                      !- Exhaust Fan Maximum Power {W}
+    ;                           !- Exhaust Fan Power Curve Name
+HeatExchanger:Desiccant:BalancedFlow,
+    AHU_1_2_3 Desiccant Wheel,  !- Name
+    Always On,           !- Availability Schedule Name
+    AHU_1_2_3 Regen Fan Outlet,     !- Regeneration Air Inlet Node Name
+    AHU_1_2_3 HX Regen Outlet,    !- Regeneration Air Outlet Node Name
+    AHU_1_2_3 Cooling Coil Outlet,   !- Process Air Inlet Node Name
+    AHU_1_2_3 Desiccant Outlet,  !- Process Air Outlet Node Name
+    HeatExchanger:Desiccant:BalancedFlow:PerformanceDataType1,  !- Heat Exchanger Performance Object Type
+    AHU_1_2_3 HXDesPerf;              !- Heat Exchanger Performance Name
+HeatExchanger:Desiccant:BalancedFlow:PerformanceDataType1,
+    AHU_1_2_3 HXDesPerf,              !- Name
+    7.0729211,                    !- Nominal Air Flow Rate {m3/s}
+    4.773293495,                    !- Nominal Air Face Velocity {m/s}
+    50.0,                    !- Nominal Electric Power {W}
+    -2.53636E+00,            !- Temperature Equation Coefficient 1
+    2.13247E+01,             !- Temperature Equation Coefficient 2
+    9.23308E-01,             !- Temperature Equation Coefficient 3
+    9.43276E+02,             !- Temperature Equation Coefficient 4
+    -5.92367E+01,            !- Temperature Equation Coefficient 5
+    -4.27465E-02,            !- Temperature Equation Coefficient 6
+    1.12204E+02,             !- Temperature Equation Coefficient 7
+    7.78252E-01,             !- Temperature Equation Coefficient 8
+    0.000000,!0.007143,                !- Minimum Regeneration Inlet Air Humidity Ratio for Temperature Equation {kg/kg}
+    1.000000,!0.024286,                !- Maximum Regeneration Inlet Air Humidity Ratio for Temperature Equation {kg/kg}
+    46.111110,               !- Minimum Regeneration Inlet Air Temperature for Temperature Equation {C}
+    46.111112,               !- Maximum Regeneration Inlet Air Temperature for Temperature Equation {C}
+    0.000000,!0.005000,                !- Minimum Process Inlet Air Humidity Ratio for Temperature Equation {kg/kg}
+    1.000000,!0.015714,                !- Maximum Process Inlet Air Humidity Ratio for Temperature Equation {kg/kg}
+    -100.000,!4.583333,                !- Minimum Process Inlet Air Temperature for Temperature Equation {C}
+    100.0000,!21.83333,                !- Maximum Process Inlet Air Temperature for Temperature Equation {C}
+    0.001,!2.286,                   !- Minimum Regeneration Air Velocity for Temperature Equation {m/s}
+    4.826,                   !- Maximum Regeneration Air Velocity for Temperature Equation {m/s}
+    35.0,                    !- Minimum Regeneration Outlet Air Temperature for Temperature Equation {C}
+    50.0,                    !- Maximum Regeneration Outlet Air Temperature for Temperature Equation {C}
+    5.0,                     !- Minimum Regeneration Inlet Air Relative Humidity for Temperature Equation {percent}
+    45.0,                    !- Maximum Regeneration Inlet Air Relative Humidity for Temperature Equation {percent}
+    0,!80.0,                    !- Minimum Process Inlet Air Relative Humidity for Humidity Ratio Equation {percent}
+    100.0,                   !- Maximum Process Inlet Air Relative Humidity for Temperature Equation {percent}
+    -2.25547E+01,            !- Humidity Ratio Equation Coefficient 1
+    9.76839E-01,             !- Humidity Ratio Equation Coefficient 2
+    4.89176E-01,             !- Humidity Ratio Equation Coefficient 3
+    -6.30019E-02,            !- Humidity Ratio Equation Coefficient 4
+    1.20773E-02,             !- Humidity Ratio Equation Coefficient 5
+    5.17134E-05,             !- Humidity Ratio Equation Coefficient 6
+    4.94917E-02,             !- Humidity Ratio Equation Coefficient 7
+    -2.59417E-04,            !- Humidity Ratio Equation Coefficient 8
+    0.000000,!0.007143,                !- Minimum Regeneration Inlet Air Humidity Ratio for Temperature Equation {kg/kg}
+    1.000000,!0.024286,                !- Maximum Regeneration Inlet Air Humidity Ratio for Temperature Equation {kg/kg}
+    46.111110,               !- Minimum Regeneration Inlet Air Temperature for Humidity Ratio Equation {C}
+    46.111112,               !- Maximum Regeneration Inlet Air Temperature for Humidity Ratio Equation {C}
+    0.000000,!0.005000,                !- Minimum Process Inlet Air Humidity Ratio for Temperature Equation {kg/kg}
+    1.000000,!0.015714,                !- Maximum Process Inlet Air Humidity Ratio for Temperature Equation {kg/kg}
+    -100.000,!4.583333,                !- Minimum Process Inlet Air Temperature for Temperature Equation {C}
+    100.0000,!21.83333,                !- Maximum Process Inlet Air Temperature for Temperature Equation {C}
+    0.001,!2.286,                   !- Minimum Regeneration Air Velocity for Temperature Equation {m/s}
+    4.826,                   !- Maximum Regeneration Air Velocity for Humidity Ratio Equation {m/s}
+    0.000000,!0.007914,                !- Minimum Regeneration Outlet Air Humidity Ratio for Humidity Ratio Equation {kg/kg}
+    1.000000,!0.026279,                !- Maximum Regeneration Outlet Air Humidity Ratio for Humidity Ratio Equation {kg/kg}
+    5.0,                     !- Minimum Regeneration Inlet Air Relative Humidity for Humidity Ratio Equation {percent}
+    45.0,                    !- Maximum Regeneration Inlet Air Relative Humidity for Humidity Ratio Equation {percent}
+    0,!80.0,                    !- Minimum Process Inlet Air Relative Humidity for Humidity Ratio Equation {percent}
+    100.0;                   !- Maximum Process Inlet Air Relative Humidity for Humidity Ratio Equation {percent}
+Fan:OnOff,
+    AHU_1_2_3 Desiccant Regen Fan,  !- Name
+    Always On,           !- Availability Schedule Name
+    0.8,                     !- Fan Efficiency
+    990,                   !- Pressure Rise {Pa}
+    7.0729211,                 ! Maximum Flow Rate {m3/s}
+    0.895,                     !- Motor Efficiency
+    1.0,                     !- Motor In Airstream Fraction
+    AHU_1_2_3 HX Regen Outlet, !- Air Inlet Node Name
+    AHU_1_2_3 Regen Fan Outlet;!- Air Outlet Node Name
+Fan:ConstantVolume,
+    AHU_1_2_3 Supply Fan,  ! Name
+    Always On,    ! Availability Schedule Name
+    0.8,      ! Fan Efficiency
+    2384,                      ! Pressure Rise {Pa}
+    7.0729211,                 ! Maximum Flow Rate {m3/s}
+    0.895,      ! Motor Efficiency
+    1,                        ! Motor In Airstream Fraction
+    AHU_1_2_3 Desiccant Outlet,               ! Air Inlet Node Name
+    AHU_1_2_3 Supply Fan Outlet;               ! Air Outlet Node Name
+Coil:Heating:Gas,
+    AHU_1_2_3 Heating Coil,    ! Name
+    Always On,    ! Availability Schedule Name
+    0.8,                     ! Gas Burner Efficiency
+    562696,                 ! Nominal Capacity {W}
+    AHU_1_2_3 Supply Fan Outlet,               ! Air Inlet Node Name
+    AHU_1_2_3 Heating Coil Outlet,               ! Air Outlet Node Name
+    AHU_1_2_3 Heating Coil Outlet;               ! Temperature Setpoint Node Name
+SetpointManager:MixedAir,
+    AHU_1_2_3 Mixed Air Temp Manager,  ! Name
+    Temperature,              ! Control Variable
+    AHU_1_2_3 Heating Coil Outlet,               ! Reference Setpoint Node Name
+    AHU_1_2_3 Desiccant Outlet,               ! Fan Inlet Node Name
+    AHU_1_2_3 Supply Fan Outlet,               ! Fan Outlet Node Name
+    AHU_1_2_3 Mixed Air Nodes;               ! Setpoint Node or NodeList Name
+NodeList,
+    AHU_1_2_3 Mixed Air Nodes,  !- Name
+    AHU_1_2_3 Desiccant Outlet,               ! Setpoint Node or NodeList Name
+    AHU_1_2_3 Mixed Air Outlet;  !- Node 2 Name
+SetpointManager:SingleZone:Reheat,
+    AHU_1_2_3 Heating Supply Air Temp Manager,  ! Name
+    Temperature,              ! Control Variable
+    -99,                      ! Minimum Supply Air Temperature {C}
+    99,                       ! Maximum Supply Air Temperature {C}
+    Sales Zone,                         ! Control Zone Name
+    Sales Air Node,                         ! Zone Node Name
+    Sales Terminal Inlet Node,                         ! Zone Inlet Node Name
+    AHU_1_2_3 Heating Coil Outlet;               ! Setpoint Node or NodeList Name
+SetpointManager:SingleZone:Cooling,
+    AHU_1_2_3 Cooling Supply Air Temp Manager,  ! Name
+    Temperature,              ! Control Variable
+    -99,                      ! Minimum Supply Air Temperature {C}
+    99,                       ! Maximum Supply Air Temperature {C}
+    Sales Zone,                         ! Control Zone Name
+    Sales Air Node,                         ! Zone Node Name
+    Sales Terminal Inlet Node,                         ! Zone Inlet Node Name
+    AHU_1_2_3 Supply Fan Outlet;               ! Setpoint Node or NodeList Name
+SetpointManager:SingleZone:Humidity:Maximum,
+    AHU_1_2_3 Max Humidity Manager,  !- Name
+    ,                        !- Control Variable
+    ,                        !- Schedule Name
+    AHU_1_2_3 Desiccant Outlet,  !- Setpoint Node or NodeList Name
+    Sales Air Node;           !- Control Zone Air Node Name
+AirLoopHVAC:SupplyPath,
+    AHU_1_2_3 Supply Path,   !- Name
+    AHU_1_2_3 Supply Path Inlet,  !- Supply Air Path Inlet Node Name
+    AirLoopHVAC:ZoneSplitter,!- Component 1 Object Type
+    AHU_1_2_3 Splitter;      !- Component 1 Name
+AirLoopHVAC:ZoneSplitter,
+    AHU_1_2_3 Splitter,  !- Name
+    AHU_1_2_3 Supply Path Inlet,  !- Inlet Node Name
+    Sales Terminal Inlet Node;  !- Control 1 Name
+AirLoopHVAC:ReturnPath,
+    AHU_1_2_3 Return Air Path,    !- Name
+    AHU_1_2_3 Return Air Outlet,  !- Return Air Path Outlet Node Name
+    AirLoopHVAC:ZoneMixer,  !- Component 1 Object Type
+    AHU_1_2_3 Return Air Mixer;   !- Component 1 Name
+AirLoopHVAC:ZoneMixer,
+    AHU_1_2_3 Return Air Mixer,   !- Name
+    AHU_1_2_3 Return Air Outlet,  !- Outlet Node Name
+    Sales Return Node;  !- Control 1 Name
+Schedule:Compact,
+    RTUCycleSchedule,  ! Name
+    Fraction,                         ! Schedule Type Limits Name
+    Through: 12/31,           ! Field 1
+    For: AllDays,             ! Field 2
+    Until: 24:00,             ! Field 3
+    0;                      ! Field 4

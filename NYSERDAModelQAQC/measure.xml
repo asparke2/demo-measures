@@ -1,0 +1,51 @@
+<measure>
+  <name>NYSERDA Model QAQC</name>
+  <uid>57a7f2fc-df90-4f74-b5b5-12c9f62d4336</uid>
+  <version_id>56d5102f-cf8b-4529-97a1-6e97082b3cbd</version_id>
+  <description>This measure performs the basic modeling QAQC checks required by the NYSERDA New Construction Technical Assistance program.</description>
+  <modeler_description>Performs checks on WWR, Building Area, etc.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Reporting.QAQC</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>NYSERDAModelQAQC_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>F6986619</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.0.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>0089512D</checksum>
+    </file>
+  </files>
+</measure>

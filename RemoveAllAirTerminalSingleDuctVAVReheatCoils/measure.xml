@@ -1,0 +1,41 @@
+<measure>
+  <name>RemoveAllAirTerminalSingleDuctVAVReheat Coils</name>
+  <uid>9871af8d-7fe7-47db-83d9-000ef12bccfc</uid>
+  <version_id>92aab410-cec5-4709-a558-19d027873b1a</version_id>
+  <description>somehow the model has several orphaned air terminals.  Remove these.</description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Whole System</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>RemoveAllAirTerminalSingleDuctVAVReheatCoils_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>38D4CFC4</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>DC9B4B64</checksum>
+    </file>
+  </files>
+</measure>

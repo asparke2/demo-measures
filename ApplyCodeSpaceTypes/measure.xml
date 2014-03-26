@@ -1,0 +1,85 @@
+<measure>
+  <name>Apply Code Space Types</name>
+  <uid>794a96fc-a677-4f00-86e9-122f9659c5d9</uid>
+  <version_id>73da5af3-53a4-433e-be00-c6f04953d6f7</version_id>
+  <description></description>
+  <modeler_description>&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+&#xd;&#xd;
+Loop through all lights and luminaires in the specified space type or the entire building. Clone the definition if it is shared by other lights, rename and adjust the power based on the specified percentage. Link the new definition to the existing lights or luminaire instance.  Adjust the power for lighting equipment assigned to a particular space but only if that space is part of the selected space type by  looping through the objects first in space types and then in spaces, but again only for spaces that are in the specified space type (unless the entire building has been chosen).  Material and installation cost increases will be applied to all costs related to both the definition and instance of the lighting object.  If this measure includes baseline costs, then the material and installation costs of the lighting objects in the baseline model will be summed together and added as a capital cost on the building object.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Electric Lighting.Lighting Equipment</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>EnvelopeAndLoadTestModel_01.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>938A1BB0</checksum>
+    </file>
+    <file>
+      <filename>ReduceLightingLoadsByPercentage_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>AC41E251</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>0.11.3</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>BCD0DA48</checksum>
+    </file>
+  </files>
+</measure>

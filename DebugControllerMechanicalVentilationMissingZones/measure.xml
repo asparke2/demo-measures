@@ -1,0 +1,41 @@
+<measure>
+  <name>Debug Controller Mechanical Ventilation Missing Zones</name>
+  <uid>e0e704e4-fb24-4e97-9a0a-ea4bdc476f29</uid>
+  <version_id>a1ec56e8-0e99-49b1-9f17-e7b9adc289e3</version_id>
+  <description>Implements the same code as ForwardTranslateSizingZone and gives users a clue about how they might be able to debug this error.</description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Reporting.Troubleshooting</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>DebugControllerMechanicalVentilationMissingZones_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>C760B439</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>14A582A6</checksum>
+    </file>
+  </files>
+</measure>

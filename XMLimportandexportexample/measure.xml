@@ -1,0 +1,41 @@
+<measure>
+  <name>XML import and export example</name>
+  <uid>4306a4cb-e634-4151-817f-65ebb90e6550</uid>
+  <version_id>4ae90ea4-c6f5-4005-babd-7a3ad0cec635</version_id>
+  <description>This measure reads data from an xml called resource.xml (this is the info Everett is storing the .sqlite file).  The measure does a calculation, then appends the result to a file called simulation_results.xml which lives in a specific place on the computer.</description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Reporting.QAQC</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ReportingMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.1.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>FB05A54E</checksum>
+    </file>
+    <file>
+      <filename>XMLimportandexportexample_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>C77416A4</checksum>
+    </file>
+  </files>
+</measure>

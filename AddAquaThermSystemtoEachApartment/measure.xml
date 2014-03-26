@@ -1,0 +1,41 @@
+<measure>
+  <name>Add AquaTherm System to Each Apartment</name>
+  <uid>ed88f3cf-29c6-4da9-8f6b-567d6343493c</uid>
+  <version_id>b12096d5-a5ad-42af-995f-87550cdf7e20</version_id>
+  <description>Add an AquaTherm system to each apartment.  This system consists of a small water heater which provides both hot water for showers and sinks, and hot water for heating in the winter.  The hot water coil and a separate DX cooling coil are packaged together in a small fan-coil unit recessed in the ceiling.  Optionally, this unit may bring in outdoor air for space ventilation.</description>
+  <modeler_description>Loop through the model and add a PTAC with a cycling fan to each thermal zone.  Connect the hot water coil in this PTAC to a water loop with a small, constant-volume pump and a small hot water heater.  Also, add a shower and a sink to each zone and connect it to the water heater.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Whole System</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>AddAquaThermSystemtoEachApartment_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>94ABB4F8</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>ED177BC4</checksum>
+    </file>
+  </files>
+</measure>

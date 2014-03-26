@@ -1,0 +1,41 @@
+<measure>
+  <name>Add Economizer To Air Handler</name>
+  <uid>60ffab95-b14f-461f-acff-ae316c6da09c</uid>
+  <version_id>e7eaf07b-e0d4-4d5c-8fc4-255a3cd71c00</version_id>
+  <description>Add economizer controls to the outdoor air dampers in an air handler.  These controls will open the outdoor air dampers whenever the system needs cooling and the outdoor air is cold enough.</description>
+  <modeler_description>Loop through all airloops and find ones without economizers.  Check the applicability of the economizer (does not apply to small systems or certain climate zones).  If applicable, apply the economizer to the system.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Cooling</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.3</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>A7ADBAA4</checksum>
+    </file>
+    <file>
+      <filename>AddEconomizerToAirHandler_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>6774CB48</checksum>
+    </file>
+  </files>
+</measure>

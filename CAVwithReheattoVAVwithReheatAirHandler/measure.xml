@@ -1,0 +1,41 @@
+<measure>
+  <name>CAV with Reheat to VAV with Reheat Air Handler</name>
+  <uid>e67aaa40-d26a-4070-9f7d-cce32754c726</uid>
+  <version_id>785e1ce8-ef0e-4e8e-bf59-cc787f01d5f5</version_id>
+  <description>Add a variable frequency drive (VFD) to the fan on the handler.  In a constant volume reheat system, unneeded conditioned air is bypassed direclty to the return air stream when the VAV boxes are throttled back.  However, energy is still expended moving this air.  Installing a VFD on the fan allows the system to lower the fan speed when less cooling is needed, minimizing the amount of air being moved and conditioned.</description>
+  <modeler_description>Search through all AirLoops in the model to find systems with Constant Speed Fans.  Replace these Constant Speed Fans with Variable Speed Fans.  Replace the setpoint manager of the AirLoop with a SetpointManager:Warmest, which enables Supply Air Temperature to be reset when demand for cooling is low.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Whole System</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>CAVwithReheattoVAVwithReheatAirHandler_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>DA9440C3</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>79FADAC8</checksum>
+    </file>
+  </files>
+</measure>

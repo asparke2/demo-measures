@@ -1,0 +1,41 @@
+<measure>
+  <name>Extraction QAQC Measures</name>
+  <uid>2c070d19-3959-410a-a6b3-0d7af5a4f133</uid>
+  <version_id>c0ba2864-caff-4c61-802e-75c932824c2d</version_id>
+  <description>End user description goes here</description>
+  <modeler_description>Modeler description goes here</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Reporting.QAQC</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ReportingMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>ExtractionQAQCMeasures_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>16F1BDD2</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.0.6</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>37455239</checksum>
+    </file>
+  </files>
+</measure>

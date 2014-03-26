@@ -1,0 +1,51 @@
+<measure>
+  <name>Summer Peak Demand and Energy Savings</name>
+  <uid>f21bd568-4454-478a-8d6b-d7c798dcb5f6</uid>
+  <version_id>b68db274-4bad-4c82-bfac-e9459d1e9431</version_id>
+  <description>Use of energy-efficient lighting equipment.</description>
+  <modeler_description>The measure is a bloody freight train on it's way to face station.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Equipment.Electric Equipment</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ReportingMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>SummerPeakDemandandEnergySavings_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>C936BE45</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.1.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>588E3F06</checksum>
+    </file>
+  </files>
+</measure>

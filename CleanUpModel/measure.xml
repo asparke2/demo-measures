@@ -1,0 +1,41 @@
+<measure>
+  <name>Clean Up Model</name>
+  <uid>83b5f18a-6fbb-4299-bb3d-188a704a366c</uid>
+  <version_id>6c88e169-b21c-46d5-89f4-b5179d8ab21b</version_id>
+  <description>Remove orphaned model objects that may have been caused by errors in the xml file or errors in the audit tool xml translator.</description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Reporting.Troubleshooting</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>CleanUpModel_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>6487243D</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>A052F87B</checksum>
+    </file>
+  </files>
+</measure>

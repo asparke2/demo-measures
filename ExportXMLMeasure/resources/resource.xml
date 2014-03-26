@@ -1,0 +1,333 @@
+<resources>
+	<facility_types>
+		<facility_type>
+			<name>Auto Related</name>
+			<lighting_hours>4056</lighting_hours>
+			<hvac_int>AR</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Bakery</name>
+			<lighting_hours>2854</lighting_hours>
+			<hvac_int>FS</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Banks</name>
+			<lighting_hours>3748</lighting_hours>
+			<hvac_int>SOfc</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Church</name>
+			<lighting_hours>1955</lighting_hours>
+			<hvac_int>Rel</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>College - Cafeteria</name>
+			<lighting_hours>2713</lighting_hours>
+			<hvac_int>FS</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>College - Classes/Administrative</name>
+			<lighting_hours>2586</lighting_hours>
+			<hvac_int>CC</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>College - Dormitory</name>
+			<lighting_hours>3066</lighting_hours>
+			<hvac_int>Dorm</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Commercial Condos</name>
+			<lighting_hours>3100</lighting_hours>
+			<hvac_int>SOfc</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Convenience Stores</name>
+			<lighting_hours>6376</lighting_hours>
+			<hvac_int>SRet</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Convention Center</name>
+			<lighting_hours>1954</lighting_hours>
+			<hvac_int>Asy</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Manufacturing Facility</name>
+			<lighting_hours>2857</lighting_hours>
+			<hvac_int>Ind</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Medical Offices</name>
+			<lighting_hours>3748</lighting_hours>
+			<hvac_int>SOfc</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Motion Picture Theatre</name>
+			<lighting_hours>1954</lighting_hours>
+			<hvac_int>Asy</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Multi - Family (Common Areas)</name>
+			<lighting_hours>7665</lighting_hours>
+			<hvac_int>MFL</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Museum</name>
+			<lighting_hours>3748</lighting_hours>
+			<hvac_int>Asy</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Nursing Homes</name>
+			<lighting_hours>5840</lighting_hours>
+			<hvac_int>MFL</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Office (Small)</name>
+			<lighting_hours>3100</lighting_hours>
+			<hvac_int>SOfc</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Office (Large)</name>
+			<lighting_hours>3100</lighting_hours>
+			<hvac_int>LOfc</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Office/Retail (Small)</name>
+			<lighting_hours>3748</lighting_hours>
+			<hvac_int>SOfc</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Office/Retail (Large)</name>
+			<lighting_hours>3748</lighting_hours>
+			<hvac_int>LOfc</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Parking Garages</name>
+			<lighting_hours>4368</lighting_hours>
+			<hvac_int>None</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Parking Lots</name>
+			<lighting_hours>4100</lighting_hours>
+			<hvac_int>None</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Court House</name>
+			<lighting_hours>3748</lighting_hours>
+			<hvac_int>LOfc</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Dining: Bar Lounge/Leisure</name>
+			<lighting_hours>4182</lighting_hours>
+			<hvac_int>FS</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Dining: Cafeteria / Fast Food</name>
+			<lighting_hours>6456</lighting_hours>
+			<hvac_int>FF</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Dining: Family</name>
+			<lighting_hours>4182</lighting_hours>
+			<hvac_int>FS</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Entertainment</name>
+			<lighting_hours>1952</lighting_hours>
+			<hvac_int>Asy</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Exercise Center</name>
+			<lighting_hours>5836</lighting_hours>
+			<hvac_int>SRet</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Fast Food Restaurants</name>
+			<lighting_hours>6376</lighting_hours>
+			<hvac_int>FF</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Fire Station (Unmanned)</name>
+			<lighting_hours>1953</lighting_hours>
+			<hvac_int>Asy</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Food Stores</name>
+			<lighting_hours>4055</lighting_hours>
+			<hvac_int>Gro</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Gymnasium</name>
+			<lighting_hours>2586</lighting_hours>
+			<hvac_int>Asy</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Hospitals</name>
+			<lighting_hours>7674</lighting_hours>
+			<hvac_int>Hosp</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Hospitals / Health Care</name>
+			<lighting_hours>7666</lighting_hours>
+			<hvac_int>Hosp</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Industrial - 1 Shift</name>
+			<lighting_hours>2857</lighting_hours>
+			<hvac_int>Ind</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Industrial - 2 Shift</name>
+			<lighting_hours>4730</lighting_hours>
+			<hvac_int>Ind</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Industrial - 3 Shift</name>
+			<lighting_hours>6631</lighting_hours>
+			<hvac_int>Ind</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Laundromats</name>
+			<lighting_hours>4056</lighting_hours>
+			<hvac_int>SRet</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Library</name>
+			<lighting_hours>3748</lighting_hours>
+			<hvac_int>LOfc</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Light Manufacturers</name>
+			<lighting_hours>2613</lighting_hours>
+			<hvac_int>Ind</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Lodging (Hotels/Motels)</name>
+			<lighting_hours>3064</lighting_hours>
+			<hvac_int>Hotel/Motel</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Mail Concourse</name>
+			<lighting_hours>4833</lighting_hours>
+			<hvac_int>LRet</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Penitentiary</name>
+			<lighting_hours>5477</lighting_hours>
+			<hvac_int>MFL</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Performing Arts Theatre</name>
+			<lighting_hours>2586</lighting_hours>
+			<hvac_int>Asy</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Police / Fire Stations (24 Hr)</name>
+			<lighting_hours>7665</lighting_hours>
+			<hvac_int>Asy</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Post Office</name>
+			<lighting_hours>3748</lighting_hours>
+			<hvac_int>SRet</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Pump Stations</name>
+			<lighting_hours>1949</lighting_hours>
+			<hvac_int>Ind</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Refrigerated Warehouse</name>
+			<lighting_hours>2602</lighting_hours>
+			<hvac_int>RWH</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Religious Building</name>
+			<lighting_hours>1955</lighting_hours>
+			<hvac_int>Rel</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Restaurants</name>
+			<lighting_hours>4182</lighting_hours>
+			<hvac_int>FS</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Retail (Small)</name>
+			<lighting_hours>4057</lighting_hours>
+			<hvac_int>SRet</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Retail (Large)</name>
+			<lighting_hours>4057</lighting_hours>
+			<hvac_int>LRet</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>School / University</name>
+			<lighting_hours>2187</lighting_hours>
+			<hvac_int>Univ</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Schools (Jr./Sr.High)</name>
+			<lighting_hours>2187</lighting_hours>
+			<hvac_int>HS</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Schools (Preshool/Elementary)</name>
+			<lighting_hours>2187</lighting_hours>
+			<hvac_int>Sch</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Schools (Technical/Vocational)</name>
+			<lighting_hours>2187</lighting_hours>
+			<hvac_int>CC</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Small Services</name>
+			<lighting_hours>3750</lighting_hours>
+			<hvac_int>SOfc</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Sports Arena</name>
+			<lighting_hours>1954</lighting_hours>
+			<hvac_int>Asy</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Town Hall</name>
+			<lighting_hours>3748</lighting_hours>
+			<hvac_int>Asy</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Transportation</name>
+			<lighting_hours>6456</lighting_hours>
+			<hvac_int>Asy</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Warehouse (Not Refrigerated)</name>
+			<lighting_hours>2602</lighting_hours>
+			<hvac_int>WH</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Waste Water Treatment Plant</name>
+			<lighting_hours>6631</lighting_hours>
+			<hvac_int>Ind</hvac_int>
+		</facility_type>
+		<facility_type>
+			<name>Workshop</name>
+			<lighting_hours>3750</lighting_hours>
+			<hvac_int>Indtest</hvac_int>
+		</facility_type>
+	</facility_types>
+	<hvac_ints>
+		<hvac_int>
+			<name>AR</name>
+			<coef_1>2.0</coef_1>
+		</hvac_int>
+		<hvac_int>
+			<name>FS</name>
+			<coef_1>1.0</coef_1>
+		</hvac_int>
+		<hvac_int>
+			<name>SOfc</name>
+			<coef_1>3.0</coef_1>
+		</hvac_int>
+	</hvac_ints>
+</resources>

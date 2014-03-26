@@ -1,0 +1,83 @@
+<measure>
+  <name>Create DOE Reference Building</name>
+  <uid>be90fd0b-a651-467a-bc8d-29d310b0f937</uid>
+  <version_id>4f7c1a11-c652-4efe-bbdf-c288b9909da0</version_id>
+  <description>Creates the DOE Reference Building Models as starting points for other analyses.</description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Whole Building.Space Types</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>CreateDOEReferenceBuilding_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>6B7134D8</checksum>
+    </file>
+    <file>
+      <filename>midrise_apartment_geometry_loads_and_schedules.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>1C239019</checksum>
+    </file>
+    <file>
+      <filename>midrise_apartment.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>AD7FC28D</checksum>
+    </file>
+    <file>
+      <filename>utilities.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>5DAE2A09</checksum>
+    </file>
+    <file>
+      <filename>large_office_geometry.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>13CCFBC5</checksum>
+    </file>
+    <file>
+      <filename>large_office.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>42282DB4</checksum>
+    </file>
+    <file>
+      <filename>OpenStudio_space_types_and_standards.json</filename>
+      <filetype>json</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>5781C4E1</checksum>
+    </file>
+    <file>
+      <filename>SpaceTypeGenerator.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>A994FFFD</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.1</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>01809E89</checksum>
+    </file>
+  </files>
+</measure>

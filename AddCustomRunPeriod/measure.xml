@@ -1,0 +1,45 @@
+<measure>
+  <name>Use Custom RunPeriod</name>
+  <uid>a41db859-deb5-411a-b480-7fb37d1f226a</uid>
+  <version_id>092b28ce-e014-4797-a458-b9c12a381919</version_id>
+  <description>This measure will replace existing Runperiod object with Runperiod:Custom object.</description>
+  <modeler_description>This measure will replace existing Runperiod object with Runperiod:Custom object.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Economics.Life Cycle Cost Analysis</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>EnergyPlusMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>0.11.3</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>060063E6</checksum>
+    </file>
+  </files>
+</measure>

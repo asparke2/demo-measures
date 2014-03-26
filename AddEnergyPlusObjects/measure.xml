@@ -1,0 +1,57 @@
+<measure>
+  <name>AddEnergyPlusObjects</name>
+  <uid>1160722e-62f5-4a2b-a74e-d3e40f08a915</uid>
+  <version_id>6dd65cf2-583b-4cde-8c59-81b1445372ec</version_id>
+  <description>Add objects to the idf</description>
+  <modeler_description>This measure adds EnergyPlus objects directly to the model after the OpenStudio model (.osm) is converted to an EnergyPlus model (.idf). </modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Envelope.Fenestration</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>EnergyPlusMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>AddEnergyPlusObjects_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>EEBF72A1</checksum>
+    </file>
+    <file>
+      <filename>resources.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>C82A875A</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.0.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>2B2E5418</checksum>
+    </file>
+  </files>
+</measure>
