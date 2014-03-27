@@ -1,12 +1,12 @@
 <measure>
   <name>Import Refrigeration Cases and Walkins</name>
   <uid>4ff3d4bc-669b-4788-883d-1eaac7b7a807</uid>
-  <version_id>f645bc0b-4ccd-4a8c-9b28-f57cae0842ed</version_id>
+  <version_id>8a6480a4-0147-45ca-a77d-a1ca679a6ff6</version_id>
   <description></description>
   <modeler_description></modeler_description>
   <provenances/>
   <tags>
-    <tag>HVAC.Whole System</tag>
+    <tag>Refrigeration.Cases and Walkins</tag>
   </tags>
   <attributes>
     <attribute>
@@ -25,25 +25,25 @@
       <filename>ImportRefrigerationCasesandWalkins_Test.rb</filename>
       <filetype>rb</filetype>
       <usage_type>test</usage_type>
-      <checksum>A1105135</checksum>
-    </file>
-    <file>
-      <filename>refrigeration_equip.xlsx</filename>
-      <filetype>xlsx</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>885A1805</checksum>
-    </file>
-    <file>
-      <filename>cases.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>C96FA2FF</checksum>
+      <checksum>C2715FB8</checksum>
     </file>
     <file>
       <filename>walkins.rb</filename>
       <filetype>rb</filetype>
       <usage_type>resource</usage_type>
-      <checksum>00331563</checksum>
+      <checksum>672FA7FD</checksum>
+    </file>
+    <file>
+      <filename>cases.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>9B4E3CA9</checksum>
+    </file>
+    <file>
+      <filename>RefBldgSuperMarketNew2004.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>E31125A5</checksum>
     </file>
     <file>
       <version>
@@ -53,7 +53,13 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>361DFA3A</checksum>
+      <checksum>115EFF0C</checksum>
+    </file>
+    <file>
+      <filename>refrigeration_equip.xlsx</filename>
+      <filetype>xlsx</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>2A667A25</checksum>
     </file>
   </files>
 </measure>
