@@ -8,12 +8,12 @@
 # http://openstudio.nrel.gov/sites/openstudio.nrel.gov/files/nv_data/cpp_documentation_it/model/html/namespaces.html
 
 #start the measure
-class SetMinimumCondensingTemperature < OpenStudio::Ruleset::ModelUserScript
+class ImplementFloatingSuctionTemperature < OpenStudio::Ruleset::ModelUserScript
   
   #define the name that a user will see, this method may be deprecated as
   #the display name in PAT comes from the name field in measure.xml
   def name
-    return "Set Minimum Condensing Temperature"
+    return "Implement Floating Suction Temperature"
   end
   
   #define the arguments that the user will input
@@ -32,14 +32,8 @@ class SetMinimumCondensingTemperature < OpenStudio::Ruleset::ModelUserScript
         
     #make a choice argument for the refrigeration system to modify
     ref_sys = OpenStudio::Ruleset::OSArgument::makeChoiceArgument("ref_sys", ref_sys_handles, ref_sys_display_names)
-    ref_sys.setDisplayName("Choose a Refrigeration System to set Minimum Condensing Temperature For.")
+    ref_sys.setDisplayName("Choose a Refrigeration System to Implement Floating Suction Temperature For.")
     args << ref_sys    
-
-    #make an argument for minimum condensing temperature
-    min_cond_temp_f = OpenStudio::Ruleset::OSArgument::makeDoubleArgument("min_cond_temp_f",true)
-    min_cond_temp_f.setDisplayName("Minimum Condensing Temperature (F)")
-    min_cond_temp_f.setDefaultValue(70.0)
-    args << min_cond_temp_f
 
     return args
   end #end the arguments method
@@ -55,8 +49,6 @@ class SetMinimumCondensingTemperature < OpenStudio::Ruleset::ModelUserScript
 
     #assign the user inputs to variables
     ref_sys_object = runner.getOptionalWorkspaceObjectChoiceValue("ref_sys",user_arguments,model)
-    min_cond_temp_f = runner.getDoubleArgumentValue("min_cond_temp_f",user_arguments)
-    min_cond_temp_c = OpenStudio::convert(min_cond_temp_f,"C","F").get
     
     #check the ref_sys argument to make sure it still is in the model
     ref_sys = nil
@@ -75,24 +67,22 @@ class SetMinimumCondensingTemperature < OpenStudio::Ruleset::ModelUserScript
     end
     
     #reporting initial condition of model
-    start_cond_temp_c = ref_sys.minimumCondensingTemperature
-    start_cond_temp_f = OpenStudio::convert(start_cond_temp_c,"C","F").get
-    runner.registerInitialCondition("#{ref_sys.name} started with a min condensing temperature of #{start_cond_temp_f}F.")
+    starting_suction_type = ref_sys.suctionTemperatureControlType
+    runner.registerInitialCondition("#{ref_sys.name} started with #{starting_suction_type}.")
     
     #not applicable if starting temperature is same as requested temperature
-    if start_cond_temp_c == min_cond_temp_c
-      runner.registerAsNotApplicable("Not Applicable - system is already set at the requested minimum condensing temperature of #{min_cond_temp_f}F.")
+    if starting_suction_type == "FloatSuctionTemperature"
+      runner.registerAsNotApplicable("Not Applicable - system is already using floating suction temperature.")
       return true
     else
-      #modify the minimum condensing temperature as requested
-      ref_sys.setMinimumCondensingTemperature(min_cond_temp_c)
-      runner.registerInfo("Set minimum condensing temperature of #{ref_sys.name} to #{min_cond_temp_f}F.")
+      #modify the suction control type as requested
+      ref_sys.setSuctionTemperatureControlType("FloatSuctionTemperature")
+      runner.registerInfo("Set #{ref_sys.name} to use floating suction temperature.")
     end
       
     #reporting final condition of model
-    end_cond_temp_c = ref_sys.minimumCondensingTemperature
-    end_cond_temp_f = OpenStudio::convert(end_cond_temp_c,"C","F").get
-    runner.registerFinalCondition("#{ref_sys.name} ended with a min condensing temperature of #{end_cond_temp_f}F.")
+    ending_suction_type = ref_sys.suctionTemperatureControlType
+    runner.registerFinalCondition("#{ref_sys.name} ended with #{ending_suction_type}.")
     
     return true
  
@@ -101,4 +91,4 @@ class SetMinimumCondensingTemperature < OpenStudio::Ruleset::ModelUserScript
 end #end the measure
 
 #this allows the measure to be use by the application
-SetMinimumCondensingTemperature.new.registerWithApplication
+ImplementFloatingSuctionTemperature.new.registerWithApplication

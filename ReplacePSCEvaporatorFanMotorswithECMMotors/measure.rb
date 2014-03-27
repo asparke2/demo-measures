@@ -71,6 +71,7 @@ class ReplacePSCEvaporatorFanMotorswithECMMotors < OpenStudio::Ruleset::ModelUse
     #check if the measure was applicable
     if cases_modified.size == 0
       runner.registerAsNotApplicable("Not Applicable - no cases appeared to have PSC evaporator fan motors.")
+      return true
     end
     
     runner.registerInitialCondition("#{cases_modified.size} cases had PSC evaporator fan motors.")

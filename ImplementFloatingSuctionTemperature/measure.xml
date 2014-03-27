@@ -1,12 +1,12 @@
 <measure>
-  <name>Replace T8 Lamps with LED Lamps in Refrigerated Cases</name>
-  <uid>f7771a65-41fc-4be0-81d2-5e054d1e379b</uid>
-  <version_id>d851994b-6b89-492a-93f6-d04c2920f82a</version_id>
-  <description>Use more efficient LED lamps (which also produce less heat) inside refrigerated cases.</description>
+  <name>Implement Floating Suction Temperature</name>
+  <uid>d783f6bb-df59-43c4-a00d-42dc0d95a7b7</uid>
+  <version_id>8d89a7c3-c967-41f8-91ed-cbf15456a16b</version_id>
+  <description></description>
   <modeler_description></modeler_description>
   <provenances/>
   <tags>
-    <tag>Refrigeration.Cases and Walkins</tag>
+    <tag>Refrigeration.Refrigeration Controls</tag>
   </tags>
   <attributes>
     <attribute>
@@ -22,10 +22,10 @@
   </attributes>
   <files>
     <file>
-      <filename>ReplaceT8LampswithLEDLampsinRefrigeratedCases_Test.rb</filename>
+      <filename>SetMinimumCondensingTemperature_Test.rb</filename>
       <filetype>rb</filetype>
       <usage_type>test</usage_type>
-      <checksum>EDF4209F</checksum>
+      <checksum>C14732BC</checksum>
     </file>
     <file>
       <version>
@@ -35,7 +35,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>640AF9D9</checksum>
+      <checksum>CE04A3E2</checksum>
     </file>
   </files>
 </measure>

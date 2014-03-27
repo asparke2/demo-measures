@@ -71,6 +71,7 @@ class ReplaceT8LampswithLEDLampsinRefrigeratedCases < OpenStudio::Ruleset::Model
     #check if the measure was applicable
     if cases_modified.size == 0
       runner.registerAsNotApplicable("Not Applicable - no cases appeared to have T8 lighting.")
+      return true
     end
     
     runner.registerInitialCondition("#{cases_modified.size} cases had T8 lighting.")
