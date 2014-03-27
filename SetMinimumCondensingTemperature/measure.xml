@@ -1,7 +1,7 @@
 <measure>
   <name>Set Minimum Condensing Temperature</name>
   <uid>9a18a722-4d3e-403a-a58b-c82f182b7a53</uid>
-  <version_id>4c570c8a-914f-4309-8ad7-70cd3f64113e</version_id>
+  <version_id>a8112d79-e067-46d5-8f9d-3ba9f52818d4</version_id>
   <description></description>
   <modeler_description></modeler_description>
   <provenances/>
@@ -35,7 +35,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>AD4CB340</checksum>
+      <checksum>316D7548</checksum>
     </file>
   </files>
 </measure>

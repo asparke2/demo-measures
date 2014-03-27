@@ -19,22 +19,13 @@ class SetMinimumCondensingTemperature < OpenStudio::Ruleset::ModelUserScript
   #define the arguments that the user will input
   def arguments(model)
     args = OpenStudio::Ruleset::OSArgumentVector.new
-
-    #make a choice argument for picking the refrigeration system
-    ref_sys_handles = OpenStudio::StringVector.new
-    ref_sys_display_names = OpenStudio::StringVector.new
-
-    #putting model object and names into hash
-    model.getRefrigerationSystems.each do |ref_sys|
-      ref_sys_display_names << ref_sys.name.to_s
-      ref_sys_handles << ref_sys.handle.to_s
-    end
-        
-    #make a choice argument for the refrigeration system to modify
-    ref_sys = OpenStudio::Ruleset::OSArgument::makeChoiceArgument("ref_sys", ref_sys_handles, ref_sys_display_names)
-    ref_sys.setDisplayName("Choose a Refrigeration System to set Minimum Condensing Temperature For.")
-    args << ref_sys    
-
+  
+    #make an argument for the refrigeration system to modify
+    ref_sys_name = OpenStudio::Ruleset::OSArgument::makeStringArgument("ref_sys_name",true)
+    ref_sys_name.setDisplayName("Select a Refrigeration System to Modify.")
+    ref_sys_name.setDefaultValue("Rack A Low Temp")
+    args << ref_sys_name   
+  
     #make an argument for minimum condensing temperature
     min_cond_temp_f = OpenStudio::Ruleset::OSArgument::makeDoubleArgument("min_cond_temp_f",true)
     min_cond_temp_f.setDisplayName("Minimum Condensing Temperature (F)")
@@ -54,26 +45,18 @@ class SetMinimumCondensingTemperature < OpenStudio::Ruleset::ModelUserScript
     end
 
     #assign the user inputs to variables
-    ref_sys_object = runner.getOptionalWorkspaceObjectChoiceValue("ref_sys",user_arguments,model)
-    min_cond_temp_f = runner.getDoubleArgumentValue("min_cond_temp_f",user_arguments)
-    min_cond_temp_c = OpenStudio::convert(min_cond_temp_f,"C","F").get
-    
-    #check the ref_sys argument to make sure it still is in the model
-    ref_sys = nil
-    if ref_sys_object.empty?
-      handle = runner.getStringArgumentValue("ref_sys",user_arguments)
-      if handle.empty?
-        runner.registerError("No refrigeration system was chosen.")
-      else
-        runner.registerError("The selected refrigeration system with handle '#{handle}' was not found in the model. It may have been removed by another measure.")
-      end
+    ref_sys_name = runner.getStringArgumentValue("ref_sys_name",user_arguments)
+    ref_sys = model.getRefrigerationSystemByName(ref_sys_name)
+    if ref_sys.empty?
+      runner.registerError("Could not find a refrigeration system called '#{ref_sys_name}'.")
       return false
     else
-      if ref_sys_object.get.to_LightsDefinition.is_initialized
-        ref_sys = ref_sys_object.get.to_RefrigerationSystem.get
-      end
+      ref_sys = ref_sys.get
     end
     
+    min_cond_temp_f = runner.getDoubleArgumentValue("min_cond_temp_f",user_arguments)
+    min_cond_temp_c = OpenStudio::convert(min_cond_temp_f,"C","F").get
+        
     #reporting initial condition of model
     start_cond_temp_c = ref_sys.minimumCondensingTemperature
     start_cond_temp_f = OpenStudio::convert(start_cond_temp_c,"C","F").get
