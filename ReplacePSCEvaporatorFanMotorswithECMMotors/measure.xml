@@ -1,7 +1,7 @@
 <measure>
   <name>Replace PSC Evaporator Fan Motors with ECM Motors</name>
   <uid>2454d8e9-1baf-4694-beb2-58e55174548a</uid>
-  <version_id>e2e65438-94ac-4a4d-a5b9-3d7e268e72e8</version_id>
+  <version_id>00933831-9b03-4129-b550-26fadefd9350</version_id>
   <description>Use more efficient ECM motors in place of PSC motors on the evaporator fans inside all refrigerated cases.</description>
   <modeler_description></modeler_description>
   <provenances/>
@@ -35,7 +35,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>688579D4</checksum>
+      <checksum>134224A7</checksum>
     </file>
   </files>
 </measure>

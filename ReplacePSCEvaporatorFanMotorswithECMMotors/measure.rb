@@ -20,7 +20,6 @@ class ReplacePSCEvaporatorFanMotorswithECMMotors < OpenStudio::Ruleset::ModelUse
   def arguments(model)
     args = OpenStudio::Ruleset::OSArgumentVector.new
     
-
     return args
   end #end the arguments method
 
@@ -33,21 +32,11 @@ class ReplacePSCEvaporatorFanMotorswithECMMotors < OpenStudio::Ruleset::ModelUse
       return false
     end
 
-    #assign the user inputs to variables
-    user_name = runner.getStringArgumentValue("user_name",user_arguments)
-    add_space = runner.getBoolArgumentValue("add_space",user_arguments)
-
-    #check the user_name for reasonableness
-    if user_name == ""
-      runner.registerError("No Name was Entered.")
-      return false
-    end 
-    
-    #light power above which indicates T8s
-    fan_psc_w_per_ft = 30
+    #fan power above which indicates PSC motors
+    fan_psc_w_per_ft = 15
     fan_psc_w_per_m = OpenStudio::convert(fan_psc_w_per_ft,"W/ft","W/m").get
     
-    #light power for LEDs
+    #light power for ECM motors
     fan_ecm_w_per_ft = 7
     fan_ecm_w_per_m = OpenStudio::convert(fan_ecm_w_per_ft,"W/ft","W/m").get
     
@@ -56,11 +45,9 @@ class ReplacePSCEvaporatorFanMotorswithECMMotors < OpenStudio::Ruleset::ModelUse
     model.getRefrigerationCases.each do |ref_case|
       std_fan_pwr = ref_case.standardCaseFanPowerperUnitLength
       ins_fan_pwr = ref_case.operatingCaseFanPowerperUnitLength
-      next unless ins_fan_pwr.is_initialized
-      ins_fan_pwr = ins_fan_pwr.get
       
       #find cases with PSC fans
-      if ins_fan_pwr < OpenStudio::convert(30,"W/ft","W/m").get
+      if ins_fan_pwr > fan_psc_w_per_m
         runner.registerInfo("Case #{ref_case.name} appears to have PSC evaporator fan motors because installed fan power = #{OpenStudio::convert(ins_fan_pwr,"W/m","W/ft").get} W/ft.")
         ref_case.setOperatingCaseFanPowerperUnitLength(fan_ecm_w_per_m)
         cases_modified << ref_case

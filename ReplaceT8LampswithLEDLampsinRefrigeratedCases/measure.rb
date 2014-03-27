@@ -13,14 +13,13 @@ class ReplaceT8LampswithLEDLampsinRefrigeratedCases < OpenStudio::Ruleset::Model
   #define the name that a user will see, this method may be deprecated as
   #the display name in PAT comes from the name field in measure.xml
   def name
-    return "ReplaceT8LampswithLEDLampsinRefrigeratedCases"
+    return "Replace T8 Lamps with LED Lamps in Refrigerated Cases"
   end
   
   #define the arguments that the user will input
   def arguments(model)
     args = OpenStudio::Ruleset::OSArgumentVector.new
     
-
     return args
   end #end the arguments method
 
@@ -33,16 +32,6 @@ class ReplaceT8LampswithLEDLampsinRefrigeratedCases < OpenStudio::Ruleset::Model
       return false
     end
 
-    #assign the user inputs to variables
-    user_name = runner.getStringArgumentValue("user_name",user_arguments)
-    add_space = runner.getBoolArgumentValue("add_space",user_arguments)
-
-    #check the user_name for reasonableness
-    if user_name == ""
-      runner.registerError("No Name was Entered.")
-      return false
-    end 
-    
     #light power above which indicates T8s
     lt_t8_w_per_ft = 30
     lt_t8_w_per_m = OpenStudio::convert(lt_t8_w_per_ft,"W/ft","W/m").get
@@ -60,7 +49,7 @@ class ReplaceT8LampswithLEDLampsinRefrigeratedCases < OpenStudio::Ruleset::Model
       ins_lt_pwr = ins_lt_pwr.get
       
       #find cases with more than 30W/ft
-      if ins_lt_pwr < lt_t8_w_per_m
+      if ins_lt_pwr > lt_t8_w_per_m
         runner.registerInfo("Case #{ref_case.name} appears to have T8 lights because installed lighting = #{OpenStudio::convert(ins_lt_pwr,"W/m","W/ft").get} W/ft.")
         ref_case.setInstalledCaseLightingPowerperUnitLength(lt_led_w_per_m)
         cases_modified << ref_case
