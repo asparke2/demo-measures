@@ -1,0 +1,41 @@
+<measure>
+  <name>Reset Hot Water Temperature Based on OA Temperature</name>
+  <uid>b5862a7d-d184-418a-aefb-243c0505b537</uid>
+  <version_id>179ad0f3-a90c-4fae-830f-d4e153ba8824</version_id>
+  <description>During the coldest parts of the year, the hot water used to heat the building needs to be set at the temperature at which the system was designed to operate.  However, during milder parts of the year when less heating is required, the hot water temperature can be set lower, while still enabling the heating system to provide the necessary heat.  One simple way of doing this is to lower the temperature of the hot water based on the temperature of the outside ar.  The colder it is outside, the hotter the heating water, and vice-versa.</description>
+  <modeler_description>Find the user-specified plant loop and replace the current controlling setpointmanager with a SetpointManager:OutdoorAirReset.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.HVAC Controls</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>ResetHotWaterTemperatureBasedonOATemperature_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>348289FB</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.3</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>80E47322</checksum>
+    </file>
+  </files>
+</measure>

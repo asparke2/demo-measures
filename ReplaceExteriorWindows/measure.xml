@@ -1,0 +1,45 @@
+<measure>
+  <name>Replace Exterior Windows</name>
+  <uid>cb29db77-3674-47b7-a83d-0586f568adf6</uid>
+  <version_id>60632233-b675-41e8-8bed-878a254163ea</version_id>
+  <description>Replace exterior windows with better windows.  The new windows will reduce heat gain and heat loss, resulting in less energy used for heating and cooling the building.</description>
+  <modeler_description>Change the construction of all exterior windows that use the selected construction to a copy of the new window construction.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Envelope.Fenestration</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>0.11.5</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>870DD552</checksum>
+    </file>
+  </files>
+</measure>

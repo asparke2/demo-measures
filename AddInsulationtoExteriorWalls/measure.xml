@@ -1,0 +1,45 @@
+<measure>
+  <name>Add Insulation to Exterior Walls</name>
+  <uid>1e5d9171-037e-4a92-80ab-48639e55a4ae</uid>
+  <version_id>cdc021bf-24de-49a2-816d-05e521d80079</version_id>
+  <description>Add insulation to exterior wals, lowering heat loss and heat gain, which results in less energy used for heating and cooling.</description>
+  <modeler_description>Add a layer of insulation of a specified  R-Value (ft^2*h*R/Btu) to all air exposed exterior walls with the selected construction.  Insulation layer will be Unfaced Polyurethane or Polyisocyanurate (https://bcl.nrel.gov/node/34449), with thickness adjusted to achieve the desired R-Value.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Envelope.Opaque</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>0.11.5</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>9E2A86F5</checksum>
+    </file>
+  </files>
+</measure>

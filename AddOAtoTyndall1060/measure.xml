@@ -1,0 +1,41 @@
+<measure>
+  <name>Add OA to Tyndall 1060</name>
+  <uid>50268e3a-0d05-4f18-8ef7-98f6933e17d7</uid>
+  <version_id>7bb131e1-18ac-4fe0-abd3-d14e0a5d054a</version_id>
+  <description>Add OA to the model.  Mid rise apt OA to Barracks rooms, Mid rise corridor OA to all others.</description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Ventilation</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>AddOAtoTyndall1060_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>A1B1EAEC</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.1</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>5D899CE6</checksum>
+    </file>
+  </files>
+</measure>

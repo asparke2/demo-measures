@@ -1,0 +1,35 @@
+<measure>
+  <name>Swap Lighting Schedule for Fixture Type</name>
+  <uid>64d8346a-f69c-4c99-b6f6-4f7c90402ff1</uid>
+  <version_id>83756db9-43b1-447e-b257-e4bdf5a3bb49</version_id>
+  <description>Reduce the run time of lighting equipment by installing occupancy sensors in a room.</description>
+  <modeler_description>Finds all instances of a given light fixture in either the whole building or a given space type and replaces their existing fractional lighting schedule with another lighting schedule from the model.  This can be used to represent lighting controls, occupancy/vacancy sensors, etc.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Electric Lighting.Electric Lighting Controls</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.1</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>372FE7C7</checksum>
+    </file>
+  </files>
+</measure>

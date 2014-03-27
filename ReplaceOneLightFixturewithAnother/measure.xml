@@ -1,0 +1,41 @@
+<measure>
+  <name>Replace One Light Fixture with Another</name>
+  <uid>b029ea33-a08e-4128-9107-26192f471cac</uid>
+  <version_id>2b38f0f9-8e80-401b-9437-3538e295fff9</version_id>
+  <description></description>
+  <modeler_description>Replace all instances of a given light fixture in either the whole building or a given space type with a new light fixture.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Electric Lighting.Lighting Equipment</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>ReplaceOneLightFixturewithAnother_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>F776271F</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.1</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>91F66EEE</checksum>
+    </file>
+  </files>
+</measure>

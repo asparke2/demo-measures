@@ -1,0 +1,35 @@
+<measure>
+  <name>Increase Chiller COP</name>
+  <uid>61a6f184-3d9b-47bc-824b-061ba35478a3</uid>
+  <version_id>c2cb0ce8-65da-423f-b182-2443176e9040</version_id>
+  <description>This measure will find chillers in the model and will alter the Rated COP to a specified value. It can be run on a single or all air loops in the model.</description>
+  <modeler_description>Loop through air loops in the building and find and change the Reference COP of any OS:Chiller:Electric:EIR objects you find. Note the pre-adjusted COP and also the name of the loop. For the starting condition note the range of COP values for the units, and for the final condition do the same, to confirm that they were all changed.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Cooling</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>0.10.2</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>6F731241</checksum>
+    </file>
+  </files>
+</measure>

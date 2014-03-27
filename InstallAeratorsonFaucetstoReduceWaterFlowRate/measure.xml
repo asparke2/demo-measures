@@ -1,0 +1,41 @@
+<measure>
+  <name>Install Aerators on Faucets to Reduce Water Flow Rate</name>
+  <uid>9d16b4cb-6ac7-4947-8027-fb892a8bd253</uid>
+  <version_id>e2f360f9-a8bd-4a2b-b07f-d83e80d2ab39</version_id>
+  <description>In many older buildings, the water fixtures work well but provide flow well beyond what is necessary for washing.  One simple way to reduce water consumption without impacting the usability of the faucet is to install aerators to lower the flow of water.  These can sometimes be retrofitted onto the existing fixtures.</description>
+  <modeler_description>Search the model for the user-specified water fixture definition objects and reduce the flow rate of the definition by the user-specified percentage.  Find all water use equipment objects that use this definition and count them for the summary.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Service Water Heating.Water Use</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>InstallAeratorsonFaucetstoReduceWaterFlowRate_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>FC553CF5</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.3</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>461C083C</checksum>
+    </file>
+  </files>
+</measure>

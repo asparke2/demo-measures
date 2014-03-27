@@ -1,0 +1,41 @@
+<measure>
+  <name>Xcel QAQC Checks</name>
+  <uid>10e16123-4c52-4484-a00e-a5ef13a6c59f</uid>
+  <version_id>060c08cc-927f-4309-8557-a65626ecccff</version_id>
+  <description>Checks for common modeling errors</description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Reporting.QAQC</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>XcelQAQCChecks_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>2A7D7D50</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.3</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>BC464124</checksum>
+    </file>
+  </files>
+</measure>

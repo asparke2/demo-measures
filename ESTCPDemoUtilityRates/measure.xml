@@ -1,0 +1,111 @@
+<measure>
+  <name>ESTCP Demo Utility Rates</name>
+  <uid>739a9dcb-f71e-4c5e-8892-11bb76ba543a</uid>
+  <version_id>bfb7ac5f-3b6f-431c-b221-82db11ece5a1</version_id>
+  <description>Set utility rate.</description>
+  <modeler_description>Set utility rate.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Economics.Life Cycle Cost Analysis</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>EnergyPlusMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>ESTCPDemoUtilityRates_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>8395CDDF</checksum>
+    </file>
+    <file>
+      <filename>AFA_Electricity.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>2FBB9963</checksum>
+    </file>
+    <file>
+      <filename>AFA_Gas.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>9AB7B2FB</checksum>
+    </file>
+    <file>
+      <filename>FtJackson_Electricity.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>FCD5CDB5</checksum>
+    </file>
+    <file>
+      <filename>FtJackson_Gas.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>91CC71E2</checksum>
+    </file>
+    <file>
+      <filename>FtBliss_Electricity.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>4801C78B</checksum>
+    </file>
+    <file>
+      <filename>FtBliss_Gas.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>55F32043</checksum>
+    </file>
+    <file>
+      <filename>Tyndall_Electricity.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>C1397389</checksum>
+    </file>
+    <file>
+      <filename>Tyndall_Gas.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>0C569E96</checksum>
+    </file>
+    <file>
+      <filename>Monterey_Electricity.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>91EED354</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>0.11.3</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>9F6944A2</checksum>
+    </file>
+    <file>
+      <filename>Monterey_Gas.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>88B5A058</checksum>
+    </file>
+  </files>
+</measure>

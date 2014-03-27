@@ -1,0 +1,47 @@
+<measure>
+  <name>Constant Speed to Variable Speed Pump</name>
+  <uid>f049d834-d10d-4b74-90ab-09ce9a44efb1</uid>
+  <version_id>434d273b-f846-442c-bf43-22ced63974d7</version_id>
+  <description>Convert constant speed pumps to variable speed pumps.</description>
+  <modeler_description>Search through all PlantLoops in the model to find systems with Constant Speed Pumps.  Replace these Constant Speed Pumps with Variable Speed Pumps.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Whole System</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>HVACTest.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>7D8C7F8D</checksum>
+    </file>
+    <file>
+      <filename>ConstantSpeedtoVariableSpeedPump_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>2AF5A249</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>85777D02</checksum>
+    </file>
+  </files>
+</measure>

@@ -1,0 +1,58 @@
+<measure>
+  <name>Implement Night Time Thermostat Setback</name>
+  <uid>61ead1b4-5f2e-42c9-9e19-646df18ab101</uid>
+  <version_id>9bd8a482-6807-4629-93d9-ce6f43a73d17</version_id>
+  <description>During the night time, when very few occupants are in the building, the building temperature only needs to be warm enough in the winter to prevent freezing, and cool enough in the summer to avoid humiditiy issues.  When the thermostats in the building can be set centrally through the building automation system, implementing a night time setback will typically save energy without impacting occupant comfort.</description>
+  <modeler_description>Find all building thermostats, find all of their heating and cooling setpoint schedules, and apply night setbacks starting at the user specified times.&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;&#xd;
+Summer and winter design day heating and cooling setpoint schedules will not be altered.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.HVAC Controls</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>EnvelopeAndLoadTestModel_01.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>1C34D03F</checksum>
+    </file>
+    <file>
+      <filename>ReduceNightTimeLightingLoads_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>89E602E8</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.0.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>FB715033</checksum>
+    </file>
+  </files>
+</measure>

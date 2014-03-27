@@ -1,0 +1,47 @@
+<measure>
+  <name>Improve Unit Heater Efficiency</name>
+  <uid>a78c1c05-03e0-44e2-af5d-63d52d45f355</uid>
+  <version_id>425bc138-f0bd-4c2f-9bd1-16f9fd866658</version_id>
+  <description>Improve Unit Heater Efficiency.</description>
+  <modeler_description>Improve Unit Heater Efficiency.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Distribution</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>0320_ModelWithHVAC_01.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>C12703F3</checksum>
+    </file>
+    <file>
+      <filename>ImproveUnitHeaterEfficiency_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>DEF66AB8</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.0.3</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>21E81DAC</checksum>
+    </file>
+  </files>
+</measure>

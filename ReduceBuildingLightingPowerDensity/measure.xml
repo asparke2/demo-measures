@@ -1,0 +1,41 @@
+<measure>
+  <name>Reduce Building Lighting Power Density</name>
+  <uid>f44e4000-36ab-45e6-8bf7-513acfa7200e</uid>
+  <version_id>a137fe70-eb91-43ac-95bd-555315e504ee</version_id>
+  <description></description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Electric Lighting.Lighting Equipment</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>ReduceBuildingLightingPowerDensity_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>5EF235F4</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.3</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>86871AED</checksum>
+    </file>
+  </files>
+</measure>

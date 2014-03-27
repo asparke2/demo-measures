@@ -1,0 +1,47 @@
+<measure>
+  <name>Improve Fan Drive Efficiency</name>
+  <uid>acf8f358-d01c-4482-89fd-245f4bcebe7d</uid>
+  <version_id>efc9b699-230a-4b70-be90-5b55333a62f9</version_id>
+  <description>Improve Fan Drive Efficiency.</description>
+  <modeler_description>Improve Fan Drive Efficiency.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Distribution</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>0320_ModelWithHVAC_01.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>C12703F3</checksum>
+    </file>
+    <file>
+      <filename>ImproveFanDriveEfficiency_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>846633DE</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.0.3</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>F841BAAB</checksum>
+    </file>
+  </files>
+</measure>

@@ -1,0 +1,35 @@
+<measure>
+  <name>Zero Out Controller Water Coil Min Actuated Flow Rate</name>
+  <uid>2c82294d-751a-4d03-ad19-c4558ad8c291</uid>
+  <version_id>949e6abe-b312-4566-ae65-4c441d31074f</version_id>
+  <description>Set all controller:watercoil min actuated flow fields to 0. </description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Distribution</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.1</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>D503668D</checksum>
+    </file>
+  </files>
+</measure>

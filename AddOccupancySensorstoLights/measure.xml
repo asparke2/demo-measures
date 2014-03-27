@@ -1,0 +1,41 @@
+<measure>
+  <name>Add Occupancy Sensors to Lights</name>
+  <uid>06f8deee-06d4-4815-a19a-0fd9047de026</uid>
+  <version_id>489f2ebb-5c69-48ab-8ac4-fd20aa4efe68</version_id>
+  <description>Occupancy sensors save energy by turning off lights when not needed and/or when spaces are left unoccupied.  Install a passive electronic sensor to automatically activate and deactivate lighting circuits based on occupancy.  There are two commonly used sensors: infrared and ultrasonic. Infrared sensors detect occupants by sensing changes in heat patterns as people move, while ultrasonic sensors detect physical movement. The type and location of each sensor must be carefully selected for each individual room layout and expected activity. In many instances, a simple wall switch replacement is adequate.  In other cases, a ceiling-mount sensor or alternatively placed wall-mount sensor may provide better coverage. In rooms with multiple lighting circuits or devices, multi-pole power packs and auxiliary relays can be configured to operate from a single sensor head. In larger spaces, multiple sensors can be wired in parallel to keep all lights on if any one sensor is triggered. </description>
+  <modeler_description>Loop through all lighting schedules assigned to lights in the specified space type or the entire building. Clone the schedule definitions used by these lights and adjust the fraction based on the specified percentage. Link the new schedule definition to the existing lights in the specified space type or the entire building.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Electric Lighting.Electric Lighting Controls</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>ReplaceOneLightFixturewithAnother_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>F776271F</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.1</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>FCF73452</checksum>
+    </file>
+  </files>
+</measure>

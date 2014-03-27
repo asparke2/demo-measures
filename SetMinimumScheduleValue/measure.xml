@@ -1,0 +1,57 @@
+<measure>
+  <name>Set Minimum Schedule Value</name>
+  <uid>bf34f5e4-9d6c-4db3-9288-78b6dfdff5d4</uid>
+  <version_id>ed65c3c3-d326-46a3-a432-d54fc0926c38</version_id>
+  <description>This measure changes the minimum value of schedules.</description>
+  <modeler_description>This measure changes the minimum value of schedules.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Equipment.Equipment Controls</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>EnvelopeAndLoadTestModel_01.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>7A810BB2</checksum>
+    </file>
+    <file>
+      <filename>SetMinimumScheduleValue_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>86752E6F</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.0.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>974179AB</checksum>
+    </file>
+  </files>
+</measure>

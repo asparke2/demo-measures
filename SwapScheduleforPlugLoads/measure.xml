@@ -1,0 +1,35 @@
+<measure>
+  <name>Swap Schedule for Plug Loads</name>
+  <uid>70d103ac-f21e-413b-8fdc-f199611f9acb</uid>
+  <version_id>beea46eb-bfb5-4d25-b5dc-d0aabe09a51e</version_id>
+  <description>Reduce the run time of plug loads by using advanced power strips to turn them off when not in use.</description>
+  <modeler_description>Finds all instances of a given electric equipment definition in either the whole building or a given space type and replaces their existing fractional  schedule with another schedule from the model.  This can be used to represent advanced power strips, dedicated scheduled plug load circuits, etc.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Equipment.Equipment Controls</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.1</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>E383520D</checksum>
+    </file>
+  </files>
+</measure>

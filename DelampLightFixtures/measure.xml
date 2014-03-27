@@ -1,0 +1,41 @@
+<measure>
+  <name>Delamp Light Fixtures</name>
+  <uid>4a5ba38c-7994-49d2-a406-c0245eb77825</uid>
+  <version_id>e563decc-8183-4ce2-a0c4-e7cdb44c8036</version_id>
+  <description>Some areas of the building have too much light being provided by the electric lighting system.  This wastes energy and can cause occupant discomfort.  One simple way to resolve this issue and save energy is to remove some of the lamps from each fixture.  Note that after performing this work, maintenance staff should be notified so that they understand what was done and why, and do not replace the missing lamps.</description>
+  <modeler_description>Find all specified lighting definitions, create a copy representing the delamped fixture, and replace this fixture in the specified space type or the whole building as specified by the user.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Electric Lighting.Lighting Equipment</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>ReplaceOneLightFixturewithAnother_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>F776271F</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.1</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>19E09C5C</checksum>
+    </file>
+  </files>
+</measure>
