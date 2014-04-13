@@ -1,0 +1,32 @@
+
+Version,
+  7.2.0.006;                              ! Version Identifier
+
+UtilityCost:Tariff,
+  Austin_Downtown_Chilled_Water,                            !- Name
+  DistrictCooling:Facility,                           !- Output Meter Name
+  Therm,                                    !- Conversion Factor Choice
+  ,                                       !- Energy Conversion Factor
+  ,                                       !- Demand Conversion Factor
+  ,                                       !- Time of Use Period Schedule Name
+  ,                                       !- Season Schedule Name
+  ,                                       !- Month Schedule Name
+  Day,                                    !- Demand Window Length
+  0.0;                                    !- Monthly Charge or Variable Name
+
+UtilityCost:Charge:Simple,
+  FlatEnergyCharge-ChilledWater,                   !- Name
+  Austin_Downtown_Chilled_Water,                            !- Tariff Name
+  totalEnergy,                            !- Source Variable
+  Annual,                                 !- Season
+  EnergyCharges,                          !- Category Variable Name
+  1.43;                                   !- Cost per Unit Value or Variable Name ! $0.1716 Per Ton Hour (1 ton-hr = 0.12 therms) = $1.43/therm
+
+UtilityCost:Charge:Simple,
+  FlatDemandCharge-ChilledWater,                   !- Name
+  Austin_Downtown_Chilled_Water,                                !- Tariff Name
+  totalDemand,                            !- Source Variable
+  Annual,                                 !- Season
+  DemandCharges,                          !- Category Variable Name
+  0.0;                                    !- Cost per Unit Value or Variable Name
+

@@ -1,0 +1,63 @@
+<measure>
+  <name>Austin Texas Utility Rates</name>
+  <uid>ea2947e8-54f2-4417-a5dc-512074bb7f93</uid>
+  <version_id>d8636f01-0680-4953-bd27-87f3e6e8078b</version_id>
+  <description>Set utility rate.</description>
+  <modeler_description>Set utility rate.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Economics.Life Cycle Cost Analysis</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Type</name>
+      <value>EnergyPlusMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>0.11.3</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>06616AB5</checksum>
+    </file>
+    <file>
+      <filename>Austin_Energy_Commercial_Secondary_Voltage_10kW_50kW.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>E32D49CF</checksum>
+    </file>
+    <file>
+      <filename>Texas_Gas_Service_Commercial.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>C09D5821</checksum>
+    </file>
+    <file>
+      <filename>Austin_Downtown_Chilled_Water.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>AE668D53</checksum>
+    </file>
+  </files>
+</measure>
