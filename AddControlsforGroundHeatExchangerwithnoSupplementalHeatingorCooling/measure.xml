@@ -1,0 +1,41 @@
+<measure>
+  <name>Add Controls for Ground Heat Exchanger with no Supplemental Heating or Cooling</name>
+  <uid>80d8ccb4-9837-4f73-8133-cd6054ab71f6</uid>
+  <version_id>472c6dd3-c9c9-4812-8b08-cb34fb52774e</version_id>
+  <description>Allows a ground heat exchanger (borefield) to operate without supplemental heating or cooling.</description>
+  <modeler_description>Adds a SetpointManager:FollowGroundTemperature setpoint manager to the specified node.  This is typically used when you have a loop with a ground heat exchanger (borefield) but don't have any supplemental heating or cooling on the loop.  Also adds deep ground temperatures, as specified in the "deep_ground_temps.idf" file in the /resources folder of this measure.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Heat Rejection</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>EnergyPlusMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>AddControlsforGroundHeatExchangerwithnoSupplementalHeatingorCooling_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>CDA777BF</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.2.5</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>8B307F8E</checksum>
+    </file>
+  </files>
+</measure>
