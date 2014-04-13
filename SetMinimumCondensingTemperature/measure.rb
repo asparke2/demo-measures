@@ -55,7 +55,7 @@ class SetMinimumCondensingTemperature < OpenStudio::Ruleset::ModelUserScript
     end
     
     min_cond_temp_f = runner.getDoubleArgumentValue("min_cond_temp_f",user_arguments)
-    min_cond_temp_c = OpenStudio::convert(min_cond_temp_f,"C","F").get
+    min_cond_temp_c = OpenStudio::convert(min_cond_temp_f,"F","C").get
         
     #reporting initial condition of model
     start_cond_temp_c = ref_sys.minimumCondensingTemperature
@@ -64,7 +64,7 @@ class SetMinimumCondensingTemperature < OpenStudio::Ruleset::ModelUserScript
     
     #not applicable if starting temperature is same as requested temperature
     if start_cond_temp_c == min_cond_temp_c
-      runner.registerAsNotApplicable("Not Applicable - system is already set at the requested minimum condensing temperature of #{min_cond_temp_f}F.")
+      runner.registerAsNotApplicable("Not Applicable - #{ref_sys.name} is already set at the requested minimum condensing temperature of #{min_cond_temp_f}F.")
       return true
     else
       #modify the minimum condensing temperature as requested

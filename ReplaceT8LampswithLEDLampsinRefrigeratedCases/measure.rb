@@ -33,11 +33,11 @@ class ReplaceT8LampswithLEDLampsinRefrigeratedCases < OpenStudio::Ruleset::Model
     end
 
     #light power above which indicates T8s
-    lt_t8_w_per_ft = 30
+    lt_t8_w_per_ft = 28
     lt_t8_w_per_m = OpenStudio::convert(lt_t8_w_per_ft,"W/ft","W/m").get
     
     #light power for LEDs
-    lt_led_w_per_ft = 7
+    lt_led_w_per_ft = 8
     lt_led_w_per_m = OpenStudio::convert(lt_led_w_per_ft,"W/ft","W/m").get
     
     #loop through all cases

@@ -1,12 +1,12 @@
 <measure>
-  <name>Set Minimum Condensing Temperature</name>
-  <uid>9a18a722-4d3e-403a-a58b-c82f182b7a53</uid>
-  <version_id>55c8630e-caa3-444d-b0f2-b6598b108b80</version_id>
+  <name>Add Mechanical Subcooler</name>
+  <uid>bdb367a8-31a3-4fb0-98f4-500509eb8fc9</uid>
+  <version_id>6e240ccc-799b-4020-8927-1238087f6e66</version_id>
   <description></description>
   <modeler_description></modeler_description>
   <provenances/>
   <tags>
-    <tag>Refrigeration.Refrigeration Controls</tag>
+    <tag>Refrigeration.Compressors</tag>
   </tags>
   <attributes>
     <attribute>
@@ -22,10 +22,10 @@
   </attributes>
   <files>
     <file>
-      <filename>SetMinimumCondensingTemperature_Test.rb</filename>
+      <filename>AddMechanicalSubcooler_Test.rb</filename>
       <filetype>rb</filetype>
       <usage_type>test</usage_type>
-      <checksum>C14732BC</checksum>
+      <checksum>BF019185</checksum>
     </file>
     <file>
       <version>
@@ -35,7 +35,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>E7CC2C2F</checksum>
+      <checksum>486A860F</checksum>
     </file>
   </files>
 </measure>

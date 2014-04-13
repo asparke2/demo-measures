@@ -33,11 +33,11 @@ class ReplacePSCEvaporatorFanMotorswithECMMotors < OpenStudio::Ruleset::ModelUse
     end
 
     #fan power above which indicates PSC motors
-    fan_psc_w_per_ft = 15
+    fan_psc_w_per_ft = 10
     fan_psc_w_per_m = OpenStudio::convert(fan_psc_w_per_ft,"W/ft","W/m").get
     
     #light power for ECM motors
-    fan_ecm_w_per_ft = 7
+    fan_ecm_w_per_ft = 4
     fan_ecm_w_per_m = OpenStudio::convert(fan_ecm_w_per_ft,"W/ft","W/m").get
     
     #loop through all cases

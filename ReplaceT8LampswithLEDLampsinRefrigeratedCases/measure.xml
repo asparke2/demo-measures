@@ -1,7 +1,7 @@
 <measure>
   <name>Replace T8 Lamps with LED Lamps in Refrigerated Cases</name>
   <uid>f7771a65-41fc-4be0-81d2-5e054d1e379b</uid>
-  <version_id>969a1653-e446-40bc-8b03-244a93a8ab8c</version_id>
+  <version_id>e6811930-81ab-4a47-a2b3-957799bbf421</version_id>
   <description>Use more efficient LED lamps (which also produce less heat) inside refrigerated cases.</description>
   <modeler_description></modeler_description>
   <provenances/>
@@ -35,7 +35,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>9D25FEE4</checksum>
+      <checksum>CB20C172</checksum>
     </file>
   </files>
 </measure>
