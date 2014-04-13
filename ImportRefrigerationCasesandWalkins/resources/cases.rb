@@ -67,7 +67,7 @@ def create_case(col, model)
   
   #zone the case is in
   zone_name = col[zone_name_row]
-  zone = model.getThermalZoneByName(avail_sch_name)
+  zone = model.getThermalZoneByName(zone_name)
   if zone.is_initialized
     zone = zone.get
   else
@@ -88,7 +88,7 @@ def create_case(col, model)
   
   #latent curve for the case
   latent_curve_name = col[latent_case_credit_curve_name_row]
-  latent_curve = model.getCurveByName(latent_curve_name)
+  latent_curve = model.getCurveCubicByName(latent_curve_name)
   if latent_curve.is_initialized
     latent_curve = latent_curve.get
   else
@@ -116,14 +116,14 @@ def create_case(col, model)
   
   #more properties
   ref_case.setFractionofLightingEnergytoCase(col[fraction_of_lighting_energy_to_case_row])
-  ref_case.setCaseAntiSweatHeaterPowerperUnitLength(col[sweat_heater_power_per_unit_length_row])
+  ref_case.setCaseAntiSweatHeaterPowerperUnitLength(col[case_anti_sweat_heater_power_per_unit_length_row])
   ref_case.setMinimumAntiSweatHeaterPowerperUnitLength(col[minimum_anti_sweat_heater_power_per_unit_length_row])
   ref_case.setAntiSweatHeaterControlType(col[anti_sweat_heater_control_type_row])
   ref_case.setHumidityatZeroAntiSweatHeaterEnergy(col[humidity_at_zero_anti_sweat_heater_energy_row])
-  ref_case.setCaseHeight(col[case_height_row])
+  #ref_case.setCaseHeight(col[case_height_row])
   ref_case.setFractionofAntiSweatHeaterEnergytoCase(col[fraction_of_anti_sweat_heater_energy_to_case_row])
   ref_case.setCaseDefrostPowerperUnitLength(col[case_defrost_power_per_unit_length_row])
-  ref_case.setDefrostType(col[case_defrost_type_row])
+  ref_case.setCaseDefrostType(col[case_defrost_type_row])
   
   #dripdown schedule for the case
   dripdown_sch_name = col[case_defrost_drip_down_schedule_name_row]
@@ -134,16 +134,17 @@ def create_case(col, model)
     @runner.registerError("could not find dripdown sch #{dripdown_curve_name} for case #{col[name_row]}, cannot create case")
     return false
   end      
-  ref_case.setDefrostDripDownSchedule(dripdown_sch)
+  ref_case.setCaseDefrostDripDownSchedule(dripdown_sch)
 
   #defrost correction curve
   ref_case.setDefrostEnergyCorrectionCurveType(col[defrost_energy_correction_curve_type_row])
   if not col[defrost_energy_correction_curve_type_row] == "None"
     #def_correction curve for the case
     def_correction_curve_name = col[defrost_energy_correction_curve_name_row]
-    def_correction_curve = model.getCurveByName(def_correction_curve_name)
+    def_correction_curve = model.getCurveCubicByName(def_correction_curve_name)
     if def_correction_curve.is_initialized
       def_correction_curve = def_correction_curve.get
+      def_correction_curve = def_correction_curve.to_CurveCubic.get
     else
       @runner.registerError("could not find def correction curve #{def_correction_curve_name} for case #{col[name_row]}, cannot create case")
       return false
@@ -152,7 +153,7 @@ def create_case(col, model)
   end
   
   #more properties
-  ref_case.setUnderCaseReturnAirFraction(col[under_case_hvac_return_air_fraction_row])
+  ref_case.setUnderCaseHVACReturnAirFraction(col[under_case_hvac_return_air_fraction_row])
   
   #restocking schedule for the case
   restocking_sch_name = col[refrigerated_case_restocking_schedule_name_row]
@@ -160,7 +161,7 @@ def create_case(col, model)
   if restocking_sch.is_initialized
     restocking_sch = restocking_sch.get
   else
-    @runner.registerError("could not find restocking sch #{restocking_curve_name} for case #{col[name_row]}, cannot create case")
+    @runner.registerError("could not find restocking sch #{restocking_sch_name} for case #{col[name_row]}, cannot create case")
     return false
   end      
   ref_case.setRefrigeratedCaseRestockingSchedule(restocking_sch)  
@@ -171,14 +172,14 @@ def create_case(col, model)
   if case_credit_sch.is_initialized
     case_credit_sch = case_credit_sch.get
   else
-    @runner.registerError("could not find case_credit sch #{case_credit_curve_name} for case #{col[name_row]}, cannot create case")
+    @runner.registerError("could not find case_credit sch #{case_credit_sch_name} for case #{col[name_row]}, cannot create case")
     return false
   end      
   ref_case.setCaseCreditFractionSchedule(case_credit_sch)  
 
   #more properties
   ref_case.setDesignEvaporatorTemperatureorBrineInletTemperature(col[design_evaporator_temperature_or_brine_inlet_temperature_row])
-  ref_case.setAverageRefrigerantChargeInventory(col[average_refrigerant_charge_inventory_row])
+  #ref_case.setAverageRefrigerantChargeInventory(col[average_refrigerant_charge_inventory_row])
   
   #inform the user
   @runner.registerInfo("Created case #{col[name_row]}}")

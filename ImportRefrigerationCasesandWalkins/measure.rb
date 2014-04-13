@@ -37,7 +37,14 @@ class ImportRefrigerationCasesandWalkins < OpenStudio::Ruleset::ModelUserScript
     require 'rubygems'
     require 'win32ole'
 
-    #load the data from the spreadsheet into ruby
+    #load the ruby helper libraries for creating objects
+    require "#{File.dirname(__FILE__)}/resources/cases.rb"
+    require "#{File.dirname(__FILE__)}/resources/walkins.rb"
+    
+    #make the runner accessible by all the helper methods
+    @runner = runner    
+    
+    #load the cases data from the spreadsheet into ruby
     data_path = "#{Dir.pwd}/resources/refrigeration_equip.xlsx"
     #enable Excel
     xl = WIN32OLE::new('Excel.Application')
@@ -45,39 +52,29 @@ class ImportRefrigerationCasesandWalkins < OpenStudio::Ruleset::ModelUserScript
     wb = xl.workbooks.open(data_path)
     #get the cases data
     cases_ws = wb.worksheets("cases")
-    cases_data = cases_ws.range('E3:AI375')['Value']
+    cases_data = cases_ws.range('C3:J37')['Value']
     cases_cols = cases_data.transpose
-    cases_rows = cases_data
     #get the walkins data
     walkins_ws = wb.worksheets("walk-ins")
-    walkins_data = walkins_ws.range('D3:J35')['Value']
-    walkins_cols = walkins_data.transpose
-    walkins_rows = walkins_data
+    walkins_data = walkins_ws.range('C3:F35')['Value']
+    walkins_cols = walkins_data.transpose    
     #close workbook
     wb.Close(1)
     #quit Excel
     xl.Quit
  
-    #load the ruby helper libraries for creating objects
-    require "#{Dir.pwd}/resources/cases.rb"
-    require "#{Dir.pwd}/resources/walkins.rb"
-    
-    #make the runner accessible by all the helper methods
-    @runner = runner
-      
     #create a new case for each column
     cases_cols.each do |case_col|
+      #runner.registerInfo("#{case_col}")
       ref_case = create_case(case_col, model) #this method is defined in resources/cases.rb
     end
-      
+
     #create a new walkin for each column
     walkins_cols.each do |walkin_col|
-      runner.registerInfo("#{walkin_col}")
-      #ref_case = create_case(walkin_col, model) #this method is defined in resources/walkins.rb
+      #runner.registerInfo("#{walkin_col}")
+      walkin = create_walkin(walkin_col, model) #this method is defined in resources/walkins.rb
     end    
     
-    
-      
     return true
  
   end #end the run method
