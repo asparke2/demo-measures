@@ -1,7 +1,7 @@
 <measure>
   <name>Import Refrigeration Cases and Walkins</name>
   <uid>4ff3d4bc-669b-4788-883d-1eaac7b7a807</uid>
-  <version_id>f645bc0b-4ccd-4a8c-9b28-f57cae0842ed</version_id>
+  <version_id>9ec15371-a49c-4e64-a858-a8d9b8b23461</version_id>
   <description></description>
   <modeler_description></modeler_description>
   <provenances/>
@@ -34,18 +34,6 @@
       <checksum>885A1805</checksum>
     </file>
     <file>
-      <filename>cases.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>C96FA2FF</checksum>
-    </file>
-    <file>
-      <filename>walkins.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>00331563</checksum>
-    </file>
-    <file>
       <version>
         <software_program>OpenStudio</software_program>
         <identifier>1.2.3</identifier>
@@ -54,6 +42,18 @@
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
       <checksum>361DFA3A</checksum>
+    </file>
+    <file>
+      <filename>cases.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>08BD0D58</checksum>
+    </file>
+    <file>
+      <filename>walkins.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>16E73C6E</checksum>
     </file>
   </files>
 </measure>

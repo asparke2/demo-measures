@@ -1,7 +1,7 @@
 <measure>
   <name>Create DOE Reference Building</name>
   <uid>be90fd0b-a651-467a-bc8d-29d310b0f937</uid>
-  <version_id>4f7c1a11-c652-4efe-bbdf-c288b9909da0</version_id>
+  <version_id>34701951-916f-45ae-ac7e-5b76d79bd9b3</version_id>
   <description>Creates the DOE Reference Building Models as starting points for other analyses.</description>
   <modeler_description></modeler_description>
   <provenances/>
@@ -34,28 +34,10 @@
       <checksum>1C239019</checksum>
     </file>
     <file>
-      <filename>midrise_apartment.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>AD7FC28D</checksum>
-    </file>
-    <file>
       <filename>utilities.rb</filename>
       <filetype>rb</filetype>
       <usage_type>resource</usage_type>
       <checksum>5DAE2A09</checksum>
-    </file>
-    <file>
-      <filename>large_office_geometry.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>13CCFBC5</checksum>
-    </file>
-    <file>
-      <filename>large_office.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>42282DB4</checksum>
     </file>
     <file>
       <filename>OpenStudio_space_types_and_standards.json</filename>
@@ -70,6 +52,24 @@
       <checksum>A994FFFD</checksum>
     </file>
     <file>
+      <filename>midrise_apartment.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>C06ADC27</checksum>
+    </file>
+    <file>
+      <filename>large_office_geometry.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>B9C621A8</checksum>
+    </file>
+    <file>
+      <filename>large_office.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>C4081573</checksum>
+    </file>
+    <file>
       <version>
         <software_program>OpenStudio</software_program>
         <identifier>1.2.1</identifier>
@@ -77,7 +77,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>01809E89</checksum>
+      <checksum>938B869D</checksum>
     </file>
   </files>
 </measure>
