@@ -1,0 +1,35 @@
+<measure>
+  <name>Hot Water Heater Efficiency</name>
+  <uid>c132f2bc-27e8-4e9e-a1e2-fd28db1e2094</uid>
+  <version_id>82aab243-44fa-409e-ae82-9b1528dc1b43</version_id>
+  <description>Hot water heaters can last for many years, and older hot water heaters often have an efficiency below what is available today.  Changing out an existing hot water heater for a more efficient model often has a quick payback in buildings with high water consumption, like hotels, dormitories, barracks, etc.</description>
+  <modeler_description>User selectes either a single hot water heater or all hot water heaters.  Measure loops through all selected water heaters, increasing their efficiency according to the user input, and adding a first cost according to the user input.</modeler_description>
+  <provenances/>
+  <tags>
+    <tag>Service Water Heating.Water Heating</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.4.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>618AADB4</checksum>
+    </file>
+  </files>
+</measure>

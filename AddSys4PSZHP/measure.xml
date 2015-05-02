@@ -1,0 +1,41 @@
+<measure>
+  <name>Add Sys 4 - PSZ-HP</name>
+  <uid>d39c0122-7e0b-4560-982e-a098f790c341</uid>
+  <version_id>55af32d6-5eb7-4e20-9387-17596ef9e32e</version_id>
+  <description></description>
+  <modeler_description></modeler_description>
+  <provenances/>
+  <tags>
+    <tag>HVAC.Whole System</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>AddSys1PTACResidential_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>F91E33DB</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.3.0</identifier>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>0A2FDC12</checksum>
+    </file>
+  </files>
+</measure>
