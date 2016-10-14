@@ -1,0 +1,47 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>vav_terminal_reverse_to_reverse_with_limits</name>
+  <uid>025c660b-d655-4ce0-a827-b56b8b283f0c</uid>
+  <version_id>21f81fb9-5366-4d7b-ab66-ae402d0a7085</version_id>
+  <version_modified>20161014T224908Z</version_modified>
+  <xml_checksum>84D9637F</xml_checksum>
+  <class_name>VAVTerminalReverseToReverseWithLimits</class_name>
+  <display_name>VAV Terminal Reverse to ReverseWithLimits</display_name>
+  <description>Changes all AirTerminalSingleDuctVAVReheat Damper Heating Action fields in model from Reverse to ReverseWithLimits.  This is to address an issue identified with OS 1.12.0 to 1.13.0 updates:  https://github.com/NREL/OpenStudio/issues/2372</description>
+  <modeler_description></modeler_description>
+  <arguments/>
+  <provenances/>
+  <tags>
+    <tag>HVAC.HVAC Controls</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>EnergyPlusMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.13.0</identifier>
+        <min_compatible>1.13.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>D57673DF</checksum>
+    </file>
+  </files>
+</measure>
